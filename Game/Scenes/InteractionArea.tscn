@@ -16,6 +16,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Notif" type="Label" parent="."]
+visible = false
 margin_left = -80.0
 margin_top = -56.0
 margin_right = 80.0
