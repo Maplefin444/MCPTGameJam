@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
 
 [node name="GUI" type="CanvasLayer"]
 
-[node name="Button" type="Button" parent="."]
+[node name="PanelButton" type="Button" parent="."]
 margin_left = 9.0
 margin_top = 10.0
 margin_right = 127.0
@@ -15,7 +16,6 @@ __meta__ = {
 }
 
 [node name="Holder" type="Panel" parent="."]
-visible = false
 margin_left = 214.0
 margin_top = 104.0
 margin_right = 829.0
@@ -25,4 +25,69 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Button" to="Holder" method="_on_Button_pressed"]
+[node name="Decrement" type="Button" parent="Holder"]
+margin_left = 32.0
+margin_top = 91.0
+margin_right = 177.0
+margin_bottom = 130.0
+text = "-"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Increment" type="Button" parent="Holder"]
+margin_left = 32.0
+margin_top = 23.0
+margin_right = 177.0
+margin_bottom = 62.0
+text = "+"
+
+[node name="CoalLabel" type="RichTextLabel" parent="."]
+margin_left = 12.0
+margin_top = 104.0
+margin_right = 136.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 62, 8 )
+text = "Coal: 0"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WoodLabel" type="RichTextLabel" parent="."]
+margin_left = 12.0
+margin_top = 80.0
+margin_right = 136.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 62, 8 )
+text = "Wood: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BrickLabel" type="RichTextLabel" parent="."]
+margin_left = 12.0
+margin_top = 127.0
+margin_right = 136.0
+margin_bottom = 143.0
+rect_pivot_offset = Vector2( 62, 8 )
+text = "Bricks: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClothLabel" type="RichTextLabel" parent="."]
+margin_left = 12.0
+margin_top = 150.0
+margin_right = 136.0
+margin_bottom = 166.0
+rect_pivot_offset = Vector2( 62, 8 )
+text = "Cloth: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]
+[connection signal="update" from="Holder" to="CoalLabel" method="_on_Holder_update"]
+[connection signal="pressed" from="Holder/Decrement" to="Holder" method="_on_Decrement_pressed"]
+[connection signal="pressed" from="Holder/Increment" to="Holder" method="_on_Increment_pressed"]
