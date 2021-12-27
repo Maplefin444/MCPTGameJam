@@ -20,6 +20,11 @@ func _physics_process(delta):
 	
 	vel = move_and_slide(vel, Vector2.UP)
 	
+	if vel.x < 0:
+		sprite.flip_h = true
+	elif vel.x > 0:
+		sprite.flip_h = false
+
 
 
 
