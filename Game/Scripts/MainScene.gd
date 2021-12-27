@@ -1,5 +1,4 @@
 extends Node2D
 
-func _draw():
-	for n in range($Holder.points.size()):
-		draw_circle($Holder.points[n], 30, Color(1,1,1))
+func _on_Button_pressed():
+	SceneChange.change_scene("res://Scenes/DragAndDrop.tscn")
