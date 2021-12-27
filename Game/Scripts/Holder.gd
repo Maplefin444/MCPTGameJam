@@ -2,7 +2,7 @@ extends Node2D
 
 var holding = false
 var latest_point = Vector2(10,10)
-var points = [Vector2(100,100), Vector2(100,500)]
+var points = [Vector2(100,100), Vector2(100,500), Vector2(500,100)]
 
 func _ready():
 	global_position = Vector2(100,100)
@@ -16,7 +16,9 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 func _physics_process(delta):
 	var lowestdist = 1000000
 	for n in range(points.size()):
-		if global_position.distance_to(points[n]) < lowestdist:
+		if global_position.distance_to(points[n]) > 200:
+			pass
+		elif global_position.distance_to(points[n]) < lowestdist:
 			latest_point = points[n]
 			lowestdist = global_position.distance_to(points[n])
 	if holding:
