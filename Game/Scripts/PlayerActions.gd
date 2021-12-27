@@ -11,11 +11,11 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("move_left"):
 		vel.x = -speed
-	elif Input.is_action_pressed("move_right"):
+	if Input.is_action_pressed("move_right"):
 		vel.x = speed
-	elif Input.is_action_pressed("move_up"):
+	if Input.is_action_pressed("move_up"):
 		vel.y = -speed
-	elif Input.is_action_pressed("move_down"):
+	if Input.is_action_pressed("move_down"):
 		vel.y = speed
 	
 	vel = move_and_slide(vel, Vector2.UP)
