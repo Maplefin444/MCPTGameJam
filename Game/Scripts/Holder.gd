@@ -4,6 +4,9 @@ var holding = false
 var latest_point = Vector2(10,10)
 var points = [Vector2(100,100), Vector2(100,500)]
 
+func _ready():
+	global_position = Vector2(100,100)
+
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_pressed("click"):
 		holding = true
