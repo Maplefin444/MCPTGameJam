@@ -24,7 +24,7 @@
 			"character": "character-1640640274.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "[wave amp=50 freq=2]Epic![/wave]"
+			"text": "[tornado radius=3 freq=4]Epic![/tornado]"
 		},
 		{
 			"action": "leaveall",

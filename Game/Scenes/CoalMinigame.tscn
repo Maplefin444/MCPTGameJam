@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/CoalMinigame.gd" type="Script" id=1]
+
+[node name="CoalMinigame" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 432.0
+margin_top = 8.0
+margin_right = 597.0
+margin_bottom = 22.0
+text = "How many pieces of coal?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
