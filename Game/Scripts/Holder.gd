@@ -25,3 +25,5 @@ func _physics_process(delta):
 		global_position = lerp(global_position, get_global_mouse_position(), 25*delta)
 	else:
 		global_position = lerp(global_position, latest_point, 10 * delta)
+
+
