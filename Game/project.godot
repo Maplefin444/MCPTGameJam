@@ -58,6 +58,10 @@ config/icon="res://icon.png"
 
 SceneChange="*res://Scenes/SceneChange.tscn"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )
+
 [input]
 
 click={

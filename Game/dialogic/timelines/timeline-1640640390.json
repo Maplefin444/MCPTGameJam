@@ -1,0 +1,44 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_002",
+			"mirror": true,
+			"portrait": "icon",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave amp=50 freq=2]Wow![/wave]"
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "[wave amp=50 freq=2]Epic![/wave]"
+		},
+		{
+			"action": "leaveall",
+			"character": "[All]",
+			"event_id": "dialogic_003"
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1640640390.json",
+		"name": "Test"
+	}
+}

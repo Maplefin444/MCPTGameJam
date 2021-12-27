@@ -9,3 +9,6 @@
 
 [node name="InteractionArea" parent="." instance=ExtResource( 1 )]
 position = Vector2( 169, 106 )
+
+[connection signal="lock" from="InteractionArea" to="Player" method="_on_InteractionArea_lock"]
+[connection signal="unlock" from="InteractionArea" to="Player" method="_on_InteractionArea_unlock"]
