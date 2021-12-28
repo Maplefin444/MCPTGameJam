@@ -2,6 +2,7 @@ extends Area2D
 
 var inside = false
 var alr = false
+signal gamer_upgrade_pressed
 
 func _input(event):
 	if Input.is_action_just_pressed("interact") && inside && not alr:
@@ -21,3 +22,7 @@ func _on_House_body_exited(body):
 func _on_TextureButton_pressed():
 	$CanvasLayer/Controller.visible = false
 	alr = false
+
+
+func _on_Button_pressed():
+	emit_signal("gamer_upgrade_pressed")

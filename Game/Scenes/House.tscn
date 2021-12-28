@@ -47,6 +47,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button" type="Button" parent="CanvasLayer/Controller"]
+margin_left = 448.0
+margin_top = 232.0
+margin_right = 576.0
+margin_bottom = 280.0
+text = "GAMIN UPGRADE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Notif" type="Label" parent="."]
 visible = false
 margin_left = -80.0
@@ -65,3 +75,4 @@ __meta__ = {
 [connection signal="body_entered" from="." to="." method="_on_House_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_House_body_exited"]
 [connection signal="pressed" from="CanvasLayer/Controller/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Controller/Button" to="." method="_on_Button_pressed"]
