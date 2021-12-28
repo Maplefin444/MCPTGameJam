@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
+[ext_resource path="res://Assets/cloth.png" type="Texture" id=3]
+[ext_resource path="res://Assets/wood.png" type="Texture" id=4]
+[ext_resource path="res://Assets/brick.png" type="Texture" id=5]
+[ext_resource path="res://Assets/coal.png" type="Texture" id=6]
 
 [node name="GUI" type="CanvasLayer"]
 
@@ -43,10 +47,10 @@ margin_bottom = 62.0
 text = "+"
 
 [node name="CoalLabel" type="RichTextLabel" parent="."]
-margin_left = 12.0
-margin_top = 104.0
-margin_right = 136.0
-margin_bottom = 120.0
+margin_left = 42.0
+margin_top = 96.0
+margin_right = 166.0
+margin_bottom = 112.0
 rect_pivot_offset = Vector2( 62, 8 )
 text = "Coal: 0"
 script = ExtResource( 2 )
@@ -55,10 +59,10 @@ __meta__ = {
 }
 
 [node name="WoodLabel" type="RichTextLabel" parent="."]
-margin_left = 12.0
-margin_top = 80.0
-margin_right = 136.0
-margin_bottom = 96.0
+margin_left = 42.0
+margin_top = 64.0
+margin_right = 166.0
+margin_bottom = 80.0
 rect_pivot_offset = Vector2( 62, 8 )
 text = "Wood: 0"
 __meta__ = {
@@ -66,9 +70,9 @@ __meta__ = {
 }
 
 [node name="BrickLabel" type="RichTextLabel" parent="."]
-margin_left = 12.0
+margin_left = 42.0
 margin_top = 127.0
-margin_right = 136.0
+margin_right = 166.0
 margin_bottom = 143.0
 rect_pivot_offset = Vector2( 62, 8 )
 text = "Bricks: 0"
@@ -77,15 +81,35 @@ __meta__ = {
 }
 
 [node name="ClothLabel" type="RichTextLabel" parent="."]
-margin_left = 12.0
-margin_top = 150.0
-margin_right = 136.0
-margin_bottom = 166.0
+margin_left = 42.0
+margin_top = 159.0
+margin_right = 166.0
+margin_bottom = 175.0
 rect_pivot_offset = Vector2( 62, 8 )
 text = "Cloth: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CoalSprite" type="Sprite" parent="."]
+position = Vector2( 22, 102 )
+scale = Vector2( 3.40625, 3.40625 )
+texture = ExtResource( 6 )
+
+[node name="Brick Sprite" type="Sprite" parent="."]
+position = Vector2( 20, 134 )
+scale = Vector2( 4.25, 4.25 )
+texture = ExtResource( 5 )
+
+[node name="WoodSprite" type="Sprite" parent="."]
+position = Vector2( 23, 70 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 4 )
+
+[node name="ClothSprite" type="Sprite" parent="."]
+position = Vector2( 21, 165 )
+scale = Vector2( 3.8125, 3.8125 )
+texture = ExtResource( 3 )
 
 [connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]
 [connection signal="update" from="Holder" to="CoalLabel" method="_on_Holder_update"]
