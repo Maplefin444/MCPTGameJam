@@ -19,7 +19,6 @@ func _physics_process(delta):
 	elif heated:
 		speedup += 0.005
 		value += speedup
-	print(value)
 
 
 func _on_GUI_enter():
