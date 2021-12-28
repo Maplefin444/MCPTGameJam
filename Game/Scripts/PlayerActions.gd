@@ -25,3 +25,11 @@ func _on_InteractionArea_lock():
 
 func _on_InteractionArea_unlock():
 	locked = false
+
+
+func _on_CoalMinigameNode_lock():
+	locked = true
+
+
+func _on_CoalMinigameNode_unlock():
+	locked = false

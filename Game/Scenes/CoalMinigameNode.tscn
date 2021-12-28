@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/CoalMinigame.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Area.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 56, 56 )
+
+[node name="CoalMinigameNode" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Notif" type="Label" parent="."]
+visible = false
+margin_left = -80.0
+margin_top = -56.0
+margin_right = 80.0
+margin_bottom = -40.0
+text = "Press E to interact!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoalMinigame" parent="." instance=ExtResource( 1 )]
+
+[connection signal="body_entered" from="." to="." method="_on_CoalMinigameNode_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_CoalMinigameNode_body_exited"]
+[connection signal="lock" from="." to="CoalMinigame" method="_on_CoalMinigameNode_lock"]
+[connection signal="cont" from="CoalMinigame" to="." method="_on_CoalMinigame_cont"]
