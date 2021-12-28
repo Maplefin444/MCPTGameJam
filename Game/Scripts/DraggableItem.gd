@@ -6,7 +6,7 @@ var gen = RandomNumberGenerator.new()
 
 func _ready():
 	gen.randomize()
-	position = Vector2(gen.randi_range(20,get_viewport().size.x -20),gen.randi_range(20,get_viewport().size.y -20))
+	position = Vector2(gen.randi_range(100,get_viewport().size.x -100),gen.randi_range(100,get_viewport().size.y -100))
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if Input.is_action_pressed("click"):

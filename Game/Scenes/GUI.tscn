@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Assets/coal.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/HeatMeter.gd" type="Script" id=8]
+[ext_resource path="res://Assets/GUI/TempFill.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GUI/TempBar.png" type="Texture" id=10]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 7 )
@@ -115,12 +117,16 @@ position = Vector2( 21, 165 )
 scale = Vector2( 3.8125, 3.8125 )
 texture = ExtResource( 3 )
 
-[node name="HeatMeter" type="ProgressBar" parent="."]
+[node name="HeatMeter" type="TextureProgress" parent="."]
 margin_left = 416.0
 margin_top = 10.0
-margin_right = 608.0
-margin_bottom = 40.0
-percent_visible = false
+margin_right = 466.0
+margin_bottom = 20.0
+rect_scale = Vector2( 3.84648, 3.07113 )
+step = 0.0
+value = 20.0
+texture_over = ExtResource( 10 )
+texture_progress = ExtResource( 9 )
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
