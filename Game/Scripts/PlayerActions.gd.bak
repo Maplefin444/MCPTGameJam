@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = -200
+var speed = 200
 var vel = Vector2()
 var locked = false
 
