@@ -35,3 +35,4 @@ __meta__ = {
 [connection signal="body_exited" from="." to="." method="_on_CoalMinigameNode_body_exited"]
 [connection signal="lock" from="." to="CoalMinigame" method="_on_CoalMinigameNode_lock"]
 [connection signal="cont" from="CoalMinigame" to="." method="_on_CoalMinigame_cont"]
+[connection signal="done" from="CoalMinigame" to="." method="_on_CoalMinigame_done"]

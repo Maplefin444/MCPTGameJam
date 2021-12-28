@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
@@ -6,8 +6,11 @@
 [ext_resource path="res://Assets/wood.png" type="Texture" id=4]
 [ext_resource path="res://Assets/brick.png" type="Texture" id=5]
 [ext_resource path="res://Assets/coal.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/GUI.gd" type="Script" id=7]
+[ext_resource path="res://Scripts/HeatMeter.gd" type="Script" id=8]
 
 [node name="GUI" type="CanvasLayer"]
+script = ExtResource( 7 )
 
 [node name="PanelButton" type="Button" parent="."]
 margin_left = 9.0
@@ -20,6 +23,7 @@ __meta__ = {
 }
 
 [node name="Holder" type="Panel" parent="."]
+visible = false
 margin_left = 214.0
 margin_top = 104.0
 margin_right = 829.0
@@ -111,6 +115,20 @@ position = Vector2( 21, 165 )
 scale = Vector2( 3.8125, 3.8125 )
 texture = ExtResource( 3 )
 
+[node name="HeatMeter" type="ProgressBar" parent="."]
+margin_left = 416.0
+margin_top = 10.0
+margin_right = 608.0
+margin_bottom = 40.0
+percent_visible = false
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="enter" from="." to="HeatMeter" method="_on_GUI_enter"]
+[connection signal="exit" from="." to="HeatMeter" method="_on_GUI_exit"]
+[connection signal="update" from="." to="CoalLabel" method="_on_GUI_update"]
 [connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]
 [connection signal="update" from="Holder" to="CoalLabel" method="_on_Holder_update"]
 [connection signal="pressed" from="Holder/Decrement" to="Holder" method="_on_Decrement_pressed"]
