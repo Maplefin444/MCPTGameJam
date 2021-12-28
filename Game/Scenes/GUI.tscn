@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Scripts/HeatMeter.gd" type="Script" id=8]
 [ext_resource path="res://Assets/GUI/TempFill.png" type="Texture" id=9]
 [ext_resource path="res://Assets/GUI/TempBar.png" type="Texture" id=10]
+[ext_resource path="res://Font/Size20.tres" type="DynamicFont" id=12]
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 7 )
@@ -56,8 +57,9 @@ text = "+"
 margin_left = 42.0
 margin_top = 96.0
 margin_right = 166.0
-margin_bottom = 112.0
+margin_bottom = 117.0
 rect_pivot_offset = Vector2( 62, 8 )
+custom_fonts/normal_font = ExtResource( 12 )
 text = "Coal: 0"
 script = ExtResource( 2 )
 __meta__ = {
@@ -68,42 +70,47 @@ __meta__ = {
 margin_left = 42.0
 margin_top = 64.0
 margin_right = 166.0
-margin_bottom = 80.0
+margin_bottom = 84.0
 rect_pivot_offset = Vector2( 62, 8 )
+custom_fonts/normal_font = ExtResource( 12 )
 text = "Wood: 0"
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BrickLabel" type="RichTextLabel" parent="."]
 margin_left = 42.0
-margin_top = 127.0
+margin_top = 131.0
 margin_right = 166.0
-margin_bottom = 143.0
+margin_bottom = 155.0
 rect_pivot_offset = Vector2( 62, 8 )
+custom_fonts/normal_font = ExtResource( 12 )
 text = "Bricks: 0"
+scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ClothLabel" type="RichTextLabel" parent="."]
 margin_left = 42.0
-margin_top = 159.0
+margin_top = 166.0
 margin_right = 166.0
-margin_bottom = 175.0
+margin_bottom = 190.0
 rect_pivot_offset = Vector2( 62, 8 )
+custom_fonts/normal_font = ExtResource( 12 )
 text = "Cloth: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CoalSprite" type="Sprite" parent="."]
-position = Vector2( 22, 102 )
+position = Vector2( 21, 104 )
 scale = Vector2( 3.40625, 3.40625 )
 texture = ExtResource( 6 )
 
 [node name="Brick Sprite" type="Sprite" parent="."]
-position = Vector2( 20, 134 )
+position = Vector2( 21, 138 )
 scale = Vector2( 4.25, 4.25 )
 texture = ExtResource( 5 )
 
@@ -113,7 +120,7 @@ scale = Vector2( 3.5, 3.5 )
 texture = ExtResource( 4 )
 
 [node name="ClothSprite" type="Sprite" parent="."]
-position = Vector2( 21, 165 )
+position = Vector2( 22, 175 )
 scale = Vector2( 3.8125, 3.8125 )
 texture = ExtResource( 3 )
 
