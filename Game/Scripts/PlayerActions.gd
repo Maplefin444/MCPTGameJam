@@ -7,8 +7,8 @@ var locked = false
 onready var sprite : Sprite = get_node("Sprite")
 
 func _physics_process(delta):
+	vel = Vector2()
 	if !locked:
-		vel = vel.normalized()
 		if Input.is_action_pressed("move_left"):
 			vel.x = speed
 		if Input.is_action_pressed("move_right"):
