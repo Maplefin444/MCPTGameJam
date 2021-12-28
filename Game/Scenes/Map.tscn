@@ -32,3 +32,4 @@ position = Vector2( -152, 240 )
 [connection signal="unlock" from="CoalMinigameNode" to="Player" method="_on_CoalMinigameNode_unlock"]
 [connection signal="body_entered" from="HeatArea" to="GUI" method="_on_HeatArea_body_entered"]
 [connection signal="body_exited" from="HeatArea" to="GUI" method="_on_HeatArea_body_exited"]
+[connection signal="gamer_upgrade_pressed" from="House" to="GUI" method="_on_House_gamer_upgrade_pressed"]
