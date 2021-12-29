@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/PixelTree.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/TreeFallGame.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/TreeFallSlider.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/TreeSize.gd" type="Script" id=4]
+
+[node name="TreeFallGame" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Tree" type="Sprite" parent="."]
+position = Vector2( 205, 250 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 375.0
+margin_top = 351.0
+margin_right = 979.0
+margin_bottom = 626.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
