@@ -10,7 +10,7 @@ func _on_ChopButton_pressed():
 		return
 	if $Controller/Tree.num-rangee <= ($Controller/HSlider.value*1.2)+240 && ($Controller/HSlider.value*1.2)+240 <= $Controller/Tree.num+rangee:
 		$Controller/HSlider/Result.text = "Correct!"
-		yield(get_tree().create_timer(0.5),"timeout")
+		yield(get_tree().create_timer(1.5),"timeout")
 		emit_signal("finished",true)
 		off = true
 		$Controller.visible = false
