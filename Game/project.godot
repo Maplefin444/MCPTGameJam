@@ -58,6 +58,11 @@ config/icon="res://icon.png"
 
 SceneChange="*res://Scenes/SceneChange.tscn"
 
+[display]
+
+window/size/resizable=false
+window/size/borderless=true
+
 [editor_plugins]
 
 enabled=PoolStringArray( "res://addons/dialogic/plugin.cfg" )

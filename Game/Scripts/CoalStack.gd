@@ -1,0 +1,21 @@
+extends Area2D
+
+
+signal coalstack_picked
+var inrange = false
+
+func _on_CoalStack_body_entered(body):
+	inrange = true
+	$Notif.visible = true
+
+
+func _on_CoalStack_body_exited(body):
+	inrange = false
+	$Notif.visible = false
+
+
+func _on_CoalStack_input_event(viewport, event, shape_idx):
+	if Input.is_action_just_pressed("click") && inrange:
+		connect("coalstack_picked", get_parent().get_node("GUI"),"_on_CoalStack_coal_picked")
+		emit_signal("coalstack_picked")
+		queue_free()

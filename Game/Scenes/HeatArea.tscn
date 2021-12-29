@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Tiles/campfire.png" type="Texture" id=1]
+[ext_resource path="res://Assets/glow.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 304.105
 
 [node name="HeatArea" type="Area2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.294118 )
+margin_left = -255.0
+margin_top = -248.0
+margin_right = -155.0
+margin_bottom = -148.0
+rect_scale = Vector2( 5, 5 )
+mouse_filter = 2
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

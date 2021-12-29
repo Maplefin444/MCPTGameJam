@@ -15,7 +15,7 @@
 [ext_resource path="res://Scripts/Vignette.gd" type="Script" id=13]
 [ext_resource path="res://Scripts/ClothLabel.gd" type="Script" id=14]
 
-[sub_resource type="Shader" id=1]
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 
 uniform vec4 color: hint_color;
@@ -28,7 +28,7 @@ void fragment(){
 }"
 
 [sub_resource type="ShaderMaterial" id=2]
-shader = SubResource( 1 )
+shader = SubResource( 3 )
 shader_param/color = Color( 1, 1, 1, 1 )
 shader_param/multiplier = 0.3
 shader_param/softness = 0.9

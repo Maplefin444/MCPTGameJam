@@ -61,3 +61,10 @@ func _on_Wood_wood_picked():
 
 func _on_Cloth_cloth_picked():
 	emit_signal("updatecloth",1)
+
+func _on_CoalStack_coal_picked():
+	emit_signal("updatecoal",3)
+
+
+func _on_WoodStack_wood_picked():
+	emit_signal("updatewood",3)
