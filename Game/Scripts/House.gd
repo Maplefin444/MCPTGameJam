@@ -13,13 +13,20 @@ func _input(event):
 		emit_signal("lock")
 
 func _on_House_body_entered(body):
-	inside = true
-	$Notif.visible = true
+	if body is StaticBody2D:
+		pass
+	else:
+		print(body)
+		inside = true
+		$Notif.visible = true
 
 
 func _on_House_body_exited(body):
-	inside = false
-	$Notif.visible = false
+	if body is StaticBody2D:
+		pass
+	else:
+		inside = false
+		$Notif.visible = false
 
 
 func _on_TextureButton_pressed():
