@@ -1,10 +1,10 @@
 extends CanvasLayer
 
-signal update(num)
 
 signal enter
 signal exit
 
+signal updatecoal(num)
 signal updatewood(num)
 signal updatecloth(num)
 
@@ -42,7 +42,7 @@ func _on_HeatMeter_dead():
 
 func _on_CoalMinigameNode_finished(res):
 	if res == "coal":
-		emit_signal("update",10)
+		emit_signal("updatecoal",10)
 
 
 
@@ -50,3 +50,14 @@ func _on_CoalMinigameNode_finished(res):
 func _on_ClothMinigameNode_completed(tf,val):
 	if tf:
 		emit_signal("updatecloth",val)
+
+
+func _on_Coal_coal_picked():
+	emit_signal("updatecoal",1)
+
+
+func _on_Wood_wood_picked():
+	emit_signal("updatewood",1)
+
+func _on_Cloth_cloth_picked():
+	emit_signal("updatecloth",1)

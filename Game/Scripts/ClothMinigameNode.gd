@@ -12,6 +12,11 @@ var running = false
 
 var completed = false
 
+func _ready():
+	connect("completed",get_parent().get_node("GUI"),"_on_ClothMinigameNode_completed")
+	connect("lock",get_parent().get_node("Player"),"_on_lock")
+	connect("unlock",get_parent().get_node("Player"),"_on_unlock")
+
 func _input(event):
 	if completed:
 		return

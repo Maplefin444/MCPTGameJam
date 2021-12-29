@@ -180,8 +180,8 @@ __meta__ = {
 
 [connection signal="enter" from="." to="HeatMeter" method="_on_GUI_enter"]
 [connection signal="exit" from="." to="HeatMeter" method="_on_GUI_exit"]
-[connection signal="update" from="." to="CoalLabel" method="_on_GUI_update"]
 [connection signal="updatecloth" from="." to="ClothLabel" method="_on_GUI_updatecloth"]
+[connection signal="updatecoal" from="." to="CoalLabel" method="_on_GUI_updatecoal"]
 [connection signal="updatewood" from="." to="WoodLabel" method="_on_GUI_updatewood"]
 [connection signal="upgrade1" from="." to="HeatMeter" method="_on_GUI_upgrade1"]
 [connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]
