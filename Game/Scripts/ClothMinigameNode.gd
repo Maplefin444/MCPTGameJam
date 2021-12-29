@@ -4,6 +4,9 @@ signal start
 
 signal completed(tf)
 
+signal lock
+signal unlock
+
 var inside = false
 var running = false
 
@@ -15,11 +18,13 @@ func _input(event):
 	if inside && Input.is_action_just_pressed("interact") && not running:
 		running = true
 		emit_signal("start")
+		emit_signal("lock")
 
 
 func _on_TreeFallGame_finished(tf):
 	if tf:
 		completed = true
+	emit_signal("unlock")
 	running = false
 	emit_signal("completed",tf)
 

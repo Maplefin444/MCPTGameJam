@@ -6,6 +6,7 @@ signal enter
 signal exit
 
 signal updatewood(num)
+signal updatecloth(num)
 
 signal upgrade1
 
@@ -44,3 +45,8 @@ func _on_CoalMinigameNode_finished(res):
 		emit_signal("update",10)
 
 
+
+
+func _on_ClothMinigameNode_completed(tf):
+	if tf:
+		emit_signal("updatecloth",10)
