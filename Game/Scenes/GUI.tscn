@@ -10,7 +10,7 @@
 [ext_resource path="res://Scripts/HeatMeter.gd" type="Script" id=8]
 [ext_resource path="res://Assets/GUI/TempFill.png" type="Texture" id=9]
 [ext_resource path="res://Assets/GUI/TempBar.png" type="Texture" id=10]
-[ext_resource path="res://Scenes/WoodLabel.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/WoodLabel.gd" type="Script" id=11]
 [ext_resource path="res://Font/Size20Outline.tres" type="DynamicFont" id=12]
 [ext_resource path="res://Scripts/Vignette.gd" type="Script" id=13]
 
