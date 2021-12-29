@@ -1,6 +1,6 @@
 {
 	"color": "#ffffffff",
-	"description": "Literally you.",
+	"description": "",
 	"display_name": "",
 	"display_name_bool": false,
 	"id": "character-1640640274.json",
@@ -14,10 +14,6 @@
 		{
 			"name": "Default",
 			"path": ""
-		},
-		{
-			"name": "icon",
-			"path": "res://icon.png"
 		}
 	],
 	"scale": 100
