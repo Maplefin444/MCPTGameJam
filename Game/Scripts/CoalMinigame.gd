@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+var off = true
 var draggableItem = preload("res://Scenes/DraggableItem.tscn")
 onready var a1 = get_node("Controller/3")
 onready var a2 = get_node("Controller/7")
@@ -12,7 +13,10 @@ var object_arr = [null,null,null,null,null,null,null,null,null,null,null,null,nu
 
 
 func _physics_process(delta):
-	if len(a1.get_overlapping_areas()) == 3 && len(a2.get_overlapping_areas()) == 7 && len(a3.get_overlapping_areas()) == 6 && len(a4.get_overlapping_areas()) == 4:
+	if off:
+		return
+	
+	if len(a1.get_overlapping_areas()) >= 3 && len(a2.get_overlapping_areas()) >= 7 && len(a3.get_overlapping_areas()) >= 6 && len(a4.get_overlapping_areas()) >= 4:
 		emit_signal("done")
 		emit_signal("cont")
 		$Controller.visible = false
@@ -22,11 +26,14 @@ func _physics_process(delta):
 
 
 func _on_Button_pressed():
+	if off:
+		return
 	emit_signal("cont")
 	$Controller.visible = false
 	for i in range(20):
 		object_arr[i].visible = false
 		object_arr[i].queue_free()
+	off = true
 
 
 func _on_CoalMinigameNode_lock():
@@ -34,6 +41,7 @@ func _on_CoalMinigameNode_lock():
 		object_arr[i] = draggableItem.instance()
 		object_arr[i] .visible = true
 		add_child(object_arr[i])
+	off = false
 
 
 

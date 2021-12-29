@@ -13,16 +13,16 @@
 [ext_resource path="res://Assets/GUI/PanelBackground.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 122.5, 45 )
+extents = Vector2( 130.75, 65.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 93, 73 )
+extents = Vector2( 120, 17 )
 
 [node name="House" type="Area2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 5.5, 83 )
+position = Vector2( 8.25, 103 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -130,7 +130,7 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -3, -7 )
+position = Vector2( 3, 111 )
 shape = SubResource( 2 )
 
 [connection signal="body_entered" from="." to="." method="_on_House_body_entered"]

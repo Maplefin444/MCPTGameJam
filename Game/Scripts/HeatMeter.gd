@@ -7,6 +7,11 @@ var retain_level = 1
 var retaining = true
 var speedup = 0
 
+signal show
+signal gone
+
+signal dead
+
 func _ready():
 	value = 100
 
@@ -19,6 +24,14 @@ func _physics_process(delta):
 	elif heated:
 		speedup += 0.005
 		value += speedup
+	if value <= 30:
+		emit_signal("show")
+	else:
+		emit_signal("gone")
+	
+	
+	if value <= 0:
+		emit_signal("dead")
 
 
 func _on_GUI_enter():

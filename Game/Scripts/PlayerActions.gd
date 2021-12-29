@@ -58,3 +58,6 @@ func _on_House_lock():
 
 func _on_House_unlock():
 	locked = false
+
+func _on_GUI_dead():
+	print("temporary death")

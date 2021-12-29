@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
@@ -10,10 +10,40 @@
 [ext_resource path="res://Scripts/HeatMeter.gd" type="Script" id=8]
 [ext_resource path="res://Assets/GUI/TempFill.png" type="Texture" id=9]
 [ext_resource path="res://Assets/GUI/TempBar.png" type="Texture" id=10]
-[ext_resource path="res://Font/Size20.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Scenes/WoodLabel.gd" type="Script" id=11]
+[ext_resource path="res://Font/Size20Outline.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Scripts/Vignette.gd" type="Script" id=13]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec4 color: hint_color;
+uniform float multiplier = 0.2;
+uniform float softness = 3.0;
+
+void fragment(){
+	float value = distance(UV,vec2(0.5));
+	COLOR = vec4(color.rgb,smoothstep(multiplier,softness,value));
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/multiplier = 0.3
+shader_param/softness = 0.9
 
 [node name="GUI" type="CanvasLayer"]
 script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 2 )
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="PanelButton" type="Button" parent="."]
 margin_left = 9.0
@@ -77,6 +107,7 @@ mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 12 )
 text = "Wood: 0"
 scroll_active = false
+script = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -146,8 +177,12 @@ __meta__ = {
 [connection signal="enter" from="." to="HeatMeter" method="_on_GUI_enter"]
 [connection signal="exit" from="." to="HeatMeter" method="_on_GUI_exit"]
 [connection signal="update" from="." to="CoalLabel" method="_on_GUI_update"]
+[connection signal="updatewood" from="." to="WoodLabel" method="_on_GUI_updatewood"]
 [connection signal="upgrade1" from="." to="HeatMeter" method="_on_GUI_upgrade1"]
 [connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]
 [connection signal="update" from="Holder" to="CoalLabel" method="_on_Holder_update"]
 [connection signal="pressed" from="Holder/Decrement" to="Holder" method="_on_Decrement_pressed"]
 [connection signal="pressed" from="Holder/Increment" to="Holder" method="_on_Increment_pressed"]
+[connection signal="dead" from="HeatMeter" to="." method="_on_HeatMeter_dead"]
+[connection signal="gone" from="HeatMeter" to="ColorRect" method="_on_HeatMeter_gone"]
+[connection signal="show" from="HeatMeter" to="ColorRect" method="_on_HeatMeter_show"]

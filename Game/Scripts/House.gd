@@ -16,7 +16,6 @@ func _on_House_body_entered(body):
 	if body is StaticBody2D:
 		pass
 	else:
-		print(body)
 		inside = true
 		$Notif.visible = true
 
