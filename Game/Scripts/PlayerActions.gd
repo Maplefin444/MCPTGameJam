@@ -61,3 +61,15 @@ func _on_House_unlock():
 
 func _on_GUI_dead():
 	print("temporary death")
+
+func _on_ClothMinigameNode_lock():
+	locked = true
+
+func _on_ClothMinigameNode_unlock():
+	locked = false
+
+func _on_WoodMinigameNode_lock():
+	locked = true
+
+func _on_WoodMinigameNode_unlock():
+	locked = false

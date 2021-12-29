@@ -6,6 +6,7 @@ signal enter
 signal exit
 
 signal updatewood(num)
+signal updatecloth(num)
 
 signal upgrade1
 
@@ -30,9 +31,9 @@ func _on_House_upgrade1_pressed():
 		emit_signal("poor")
 
 
-func _on_WoodMinigameNode_finished(tf):
+func _on_WoodMinigameNode_finished(tf,val):
 	if tf:
-		emit_signal("updatewood",10)
+		emit_signal("updatewood",val)
 
 
 func _on_HeatMeter_dead():
@@ -44,3 +45,8 @@ func _on_CoalMinigameNode_finished(res):
 		emit_signal("update",10)
 
 
+
+
+func _on_ClothMinigameNode_completed(tf,val):
+	if tf:
+		emit_signal("updatecloth",val)

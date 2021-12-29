@@ -4,10 +4,11 @@ extends Sprite
 
 var rng = RandomNumberGenerator.new()
 var s = 0
+var num = 0
 
-func _ready():
+func initialized():
 	rng.randomize()
-	s = rng.randi_range(10, 20) / 100.0
+	s = rng.randi_range(10, 15) / 100.0
 
 	var size = texture.get_size()
 	self.set_scale(Vector2(s, s))
@@ -15,5 +16,6 @@ func _ready():
 	bX /= 2
 	var bY = 0.2 * size[1] - s * size[1]
 	bY /= 2
-	self.set_position(Vector2(220 + bX, 270 + bY))
-	print(texture.get_size())
+	self.set_position(Vector2(200 + bX, 230 + bY))
+	num = texture.get_size().y * s
+	print(num)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scripts/WoodLabel.gd" type="Script" id=11]
 [ext_resource path="res://Font/Size20Outline.tres" type="DynamicFont" id=12]
 [ext_resource path="res://Scripts/Vignette.gd" type="Script" id=13]
+[ext_resource path="res://Scripts/ClothLabel.gd" type="Script" id=14]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -136,6 +137,7 @@ rect_pivot_offset = Vector2( 62, 8 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 12 )
 text = "Cloth: 0"
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -179,6 +181,7 @@ __meta__ = {
 [connection signal="enter" from="." to="HeatMeter" method="_on_GUI_enter"]
 [connection signal="exit" from="." to="HeatMeter" method="_on_GUI_exit"]
 [connection signal="update" from="." to="CoalLabel" method="_on_GUI_update"]
+[connection signal="updatecloth" from="." to="ClothLabel" method="_on_GUI_updatecloth"]
 [connection signal="updatewood" from="." to="WoodLabel" method="_on_GUI_updatewood"]
 [connection signal="upgrade1" from="." to="HeatMeter" method="_on_GUI_upgrade1"]
 [connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]

@@ -10,17 +10,23 @@ signal finished
 onready var controller = $CoalMinigame/Controller
 
 func _on_CoalMinigameNode_body_entered(body):
-	inside = true
-	if completed:
-		return
-	$Notif.visible = true
+	if body is StaticBody2D:
+		pass
+	else:
+		inside = true
+		if completed:
+			return
+		$Notif.visible = true
 
 
 func _on_CoalMinigameNode_body_exited(body):
-	inside = false
-	$Notif.visible = false
-	if completed:
-		return
+	if body is StaticBody2D:
+		pass
+	else:
+		inside = false
+		$Notif.visible = false
+		if completed:
+			return
 
 func _input(event):
 	if completed:
