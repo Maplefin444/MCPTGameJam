@@ -142,6 +142,7 @@ __meta__ = {
 [connection signal="enter" from="." to="HeatMeter" method="_on_GUI_enter"]
 [connection signal="exit" from="." to="HeatMeter" method="_on_GUI_exit"]
 [connection signal="update" from="." to="CoalLabel" method="_on_GUI_update"]
+[connection signal="upgrade1" from="." to="HeatMeter" method="_on_GUI_upgrade1"]
 [connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]
 [connection signal="update" from="Holder" to="CoalLabel" method="_on_Holder_update"]
 [connection signal="pressed" from="Holder/Decrement" to="Holder" method="_on_Decrement_pressed"]

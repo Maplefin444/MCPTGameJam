@@ -29,3 +29,7 @@ func _on_GUI_enter():
 func _on_GUI_exit():
 	heated = false
 	retaining = true
+
+
+func _on_GUI_upgrade1():
+	retain_level += 1

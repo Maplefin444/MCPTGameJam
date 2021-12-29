@@ -30,6 +30,7 @@ position = Vector2( -152, 240 )
 [connection signal="finished" from="CoalMinigameNode" to="GUI" method="_on_Minigame_finished"]
 [connection signal="lock" from="CoalMinigameNode" to="Player" method="_on_CoalMinigameNode_lock"]
 [connection signal="unlock" from="CoalMinigameNode" to="Player" method="_on_CoalMinigameNode_unlock"]
+[connection signal="poor" from="GUI" to="House" method="_on_GUI_poor"]
 [connection signal="body_entered" from="HeatArea" to="GUI" method="_on_HeatArea_body_entered"]
 [connection signal="body_exited" from="HeatArea" to="GUI" method="_on_HeatArea_body_exited"]
-[connection signal="gamer_upgrade_pressed" from="House" to="GUI" method="_on_House_gamer_upgrade_pressed"]
+[connection signal="upgrade1_pressed" from="House" to="GUI" method="_on_House_upgrade1_pressed"]
