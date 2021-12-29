@@ -22,15 +22,17 @@ func _physics_process(delta):
 func _on_InteractionArea_lock():
 	locked = true
 
-
 func _on_InteractionArea_unlock():
 	locked = false
-
 
 func _on_CoalMinigameNode_lock():
 	locked = true
 
-
 func _on_CoalMinigameNode_unlock():
 	locked = false
 
+func _on_House_lock():
+	locked = true
+
+func _on_House_unlock():
+	locked = false

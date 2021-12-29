@@ -9,7 +9,7 @@ func _ready():
 	position = Vector2(gen.randi_range(100,get_viewport().size.x -100),gen.randi_range(100,get_viewport().size.y -100))
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Input.is_action_pressed("click"):
+	if Input.is_action_just_pressed("click"):
 		holding = true
 		get_tree().set_input_as_handled()
 		original_pos = event.position
