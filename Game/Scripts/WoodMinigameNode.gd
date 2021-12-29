@@ -1,55 +1,43 @@
-extends CanvasLayer
+extends Area2D
 
-var y = 300
-var dir = true
-var count = 0
-var speed = 15
-signal complete(tf)
-var off = true
+signal start
 
-func _physics_process(delta):
-	if off:
+signal finished(tf)
+
+var inside = false
+var running = false
+
+var completed = false
+
+
+func _on_WoodMinigameNode_body_entered(body):
+	if completed:
 		return
-	if dir:
-		y+=speed
+	if body is StaticBody2D:
+		pass
 	else:
-		y-=speed
-	
-	if y > get_viewport().size.x - 305:
-		dir = false
-	elif y < 300:
-		dir = true
-	$Controller/HitObject/CollisionShape2D.position = Vector2(y,303)
-	if count == 3:
-		emit_signal("complete",true)
-		yield(get_tree().create_timer(0.5), "timeout")
-		$Controller.visible = false
-		off = true
+		inside = true
+		$Notif.visible = true
 
-func _input(InputEvent):
-	if off:
+
+func _on_WoodMinigameNode_body_exited(body):
+	if body is StaticBody2D:
+		pass
+	else:
+		$Notif.visible = false
+		if completed:
+			return
+		inside = false
+
+func _input(event):
+	if completed:
 		return
-	if Input.is_action_just_pressed("interact") && len($Controller/HitObject.get_overlapping_areas()) == 1:
-		count += 1
-		$Controller/Label.text = "HIT x" + String(count)
-		$Controller/Label.visible = true
-		yield(get_tree().create_timer(0.5), "timeout")
-		$Controller/Label.visible = false
-	elif Input.is_action_just_pressed("interact"):
-		count = 0
-		$Controller/Label.text = "MISS"
-		$Controller/Label.visible = true
-		yield(get_tree().create_timer(0.5), "timeout")
-		$Controller/Label.visible = false
+	if inside && Input.is_action_just_pressed("interact") && not running:
+		running = true
+		emit_signal("start")
 
 
-func _on_TextureButton_pressed():
-	emit_signal("complete",false)
-	$Controller.visible = false
-	off = true
-
-
-func _on_WoodMinigameNode_start():
-	$Controller.visible = true
-	off = false
-
+func _on_WoodMinigame_complete(tf):
+	completed = true
+	running = false
+	emit_signal("finished", tf)

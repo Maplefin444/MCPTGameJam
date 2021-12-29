@@ -16,7 +16,7 @@ func _physics_process(delta):
 	if off:
 		return
 	
-	if len(a1.get_overlapping_areas()) >= 3 && len(a2.get_overlapping_areas()) >= 7 && len(a3.get_overlapping_areas()) >= 6 && len(a4.get_overlapping_areas()) >= 4:
+	if len(a1.get_overlapping_areas()) == 4 and len(a2.get_overlapping_areas()) == 8 and len(a3.get_overlapping_areas()) == 7 and len(a4.get_overlapping_areas()) == 5:
 		emit_signal("done")
 		emit_signal("cont")
 		$Controller.visible = false
@@ -37,6 +37,7 @@ func _on_Button_pressed():
 
 
 func _on_CoalMinigameNode_lock():
+	object_arr = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
 	for i in range(20):
 		object_arr[i] = draggableItem.instance()
 		object_arr[i] .visible = true
