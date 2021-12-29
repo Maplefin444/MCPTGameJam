@@ -2,7 +2,7 @@ extends Area2D
 
 signal start
 
-signal finished(tf)
+signal finished(tf,val)
 
 signal lock
 signal unlock
@@ -45,4 +45,4 @@ func _on_WoodMinigame_complete(tf):
 	completed = true
 	running = false
 	emit_signal("unlock")
-	emit_signal("finished", tf)
+	emit_signal("finished", tf,10)

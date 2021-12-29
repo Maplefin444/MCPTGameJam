@@ -2,7 +2,7 @@ extends Area2D
 
 signal start
 
-signal completed(tf)
+signal completed(tf,val)
 
 signal lock
 signal unlock
@@ -26,7 +26,7 @@ func _on_TreeFallGame_finished(tf):
 		completed = true
 	emit_signal("unlock")
 	running = false
-	emit_signal("completed",tf)
+	emit_signal("completed",tf,10)
 
 
 func _on_ClothMinigameNode_body_entered(body):
