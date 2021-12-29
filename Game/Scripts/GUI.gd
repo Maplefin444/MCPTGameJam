@@ -13,9 +13,6 @@ signal poor
 
 signal dead
 
-func _on_Minigame_finished(res):
-	if res == "coal":
-		emit_signal("update",10)
 
 
 func _on_HeatArea_body_entered(body):
@@ -40,3 +37,10 @@ func _on_WoodMinigameNode_finished(tf):
 
 func _on_HeatMeter_dead():
 	emit_signal("dead")
+
+
+func _on_CoalMinigameNode_finished(res):
+	if res == "coal":
+		emit_signal("update",10)
+
+

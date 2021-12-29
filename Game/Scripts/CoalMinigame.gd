@@ -22,7 +22,7 @@ func _physics_process(delta):
 		$Controller.visible = false
 		for i in range(20):
 			object_arr[i].visible = false
-			object_arr[i].queue_free()
+			remove_child(object_arr[i])
 
 
 func _on_Button_pressed():
