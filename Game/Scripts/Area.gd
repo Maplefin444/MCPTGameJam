@@ -10,9 +10,9 @@ signal finished
 onready var controller = $CoalMinigame/Controller
 
 func _ready():
-	connect("completed",get_parent().get_node("GUI"),"_on_CoalMinigameNode_completed")
-	connect("lock",get_parent().get_node("Player"),"_on_lock")
-	connect("unlock",get_parent().get_node("Player"),"_on_unlock")
+	connect("completed",get_parent().get_parent().get_node("GUI"),"_on_CoalMinigameNode_completed")
+	connect("lock",get_parent().get_parent().get_node("Player"),"_on_lock")
+	connect("unlock",get_parent().get_parent().get_node("Player"),"_on_unlock")
 
 func _on_CoalMinigameNode_body_entered(body):
 	if body is StaticBody2D:

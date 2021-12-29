@@ -61,7 +61,6 @@ SceneChange="*res://Scenes/SceneChange.tscn"
 [display]
 
 window/size/resizable=false
-window/size/borderless=true
 
 [editor_plugins]
 
