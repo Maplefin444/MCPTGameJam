@@ -32,7 +32,6 @@ func _on_House_upgrade1_pressed():
 
 
 func _on_WoodMinigameNode_finished(tf,val):
-	print("recieved")
 	if tf:
 		emit_signal("updatewood",val)
 

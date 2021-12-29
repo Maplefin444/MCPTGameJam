@@ -12,7 +12,7 @@ func _on_Holder_update(num):
 
 
 func _physics_process(delta):
-	text = "Coal: " + String(value)
+	text = " Coal: " + String(value)
 
 
 func _on_GUI_updatecoal(num):

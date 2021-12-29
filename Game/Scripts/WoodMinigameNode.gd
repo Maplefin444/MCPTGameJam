@@ -13,7 +13,7 @@ var running = false
 var completed = false
 
 func _ready():
-	connect("completed",get_parent().get_parent().get_node("GUI"),"_on_WoodMinigameNode_completed")
+	connect("finished",get_parent().get_parent().get_node("GUI"),"_on_WoodMinigameNode_finished")
 	connect("lock",get_parent().get_parent().get_node("Player"),"_on_lock")
 	connect("unlock",get_parent().get_parent().get_node("Player"),"_on_unlock")
 
