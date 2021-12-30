@@ -37,3 +37,8 @@ func _ready():
 	generate($"Coal Minigames", $"Coal Minigames/CoalMinigameNode", -2000, 1000, 2000, 2500, 4)
 	generate($"Wood Minigames", $"Wood Minigames/WoodMinigameNode", -2000, 1000, 2000, 2500, 4)
 	generate($"Cloth Minigames", $"Cloth Minigames/ClothMinigameNode", -2000, 1000, 2000, 2500, 2)
+
+
+func _on_Area2D_body_entered(body):
+	if body is KinematicBody2D:
+		SceneChange.change_scene("res://Scenes/Ending.tscn")
