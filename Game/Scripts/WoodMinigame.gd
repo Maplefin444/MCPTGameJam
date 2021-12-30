@@ -29,7 +29,7 @@ func _physics_process(delta):
 func _input(InputEvent):
 	if off:
 		return
-	if Input.is_action_just_pressed("interact") && len($Controller/HitObject.get_overlapping_areas()) == 1:
+	if Input.is_action_just_pressed("interact") && $Controller/HitObject.overlaps_area($Controller/HitArea):
 		count += 1
 		$Controller/Label.text = "HIT x" + String(count)
 		$Controller/Label.visible = true

@@ -16,7 +16,23 @@ func _physics_process(delta):
 	if off:
 		return
 	
-	if len(a1.get_overlapping_areas()) == 4 and len(a2.get_overlapping_areas()) == 8 and len(a3.get_overlapping_areas()) == 7 and len(a4.get_overlapping_areas()) == 5:
+	var count1 = 0
+	var count2 = 0
+	var count3 = 0
+	var count4 = 0
+	
+	for i in range(20):
+		if object_arr[i].overlaps_area(a1):
+			count1 +=1
+		elif object_arr[i].overlaps_area(a2):
+			count2 +=1
+		elif object_arr[i].overlaps_area(a3):
+			count3 +=1
+		elif object_arr[i].overlaps_area(a4):
+			count4 +=1
+	
+	
+	if count1 == 3 and count2 == 7 and count3 == 6 and count4 == 4:
 		emit_signal("done")
 		emit_signal("cont")
 		$Controller.visible = false
