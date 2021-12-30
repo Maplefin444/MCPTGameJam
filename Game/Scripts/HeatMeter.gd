@@ -39,6 +39,7 @@ func _physics_process(delta):
 	
 	if value <= 0:
 		emit_signal("dead")
+	
 
 
 func _on_GUI_enter():
