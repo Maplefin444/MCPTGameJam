@@ -30,3 +30,4 @@ func _on_ClothMinigameNode_start():
 	$Controller/Tree.initialized()
 	off = false
 	$Controller.visible = true
+	$Controller/HSlider.initialized()
