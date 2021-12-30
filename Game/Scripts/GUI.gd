@@ -18,6 +18,7 @@ signal dead
 
 
 
+
 func _on_HeatArea_body_entered(body):
 	emit_signal("enter")
 
