@@ -31,7 +31,7 @@ func _on_TreeFallGame_finished(tf):
 		completed = true
 	emit_signal("unlock")
 	running = false
-	emit_signal("completed",tf,10)
+	emit_signal("completed",tf,5)
 
 
 func _on_ClothMinigameNode_body_entered(body):
