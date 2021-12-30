@@ -66,7 +66,6 @@ func _on_House_unlock():
 	locked = false
 
 func _on_GUI_dead():
-	print("temporary death")
 	locked = true
 
 func _on_WoodMinigameNode_lock():
