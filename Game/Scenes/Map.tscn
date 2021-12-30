@@ -1,6 +1,5 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
-[ext_resource path="res://Scenes/DialogueTest.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/CoalMinigameNode.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=4]
@@ -29,9 +28,6 @@ position = Vector2( 282, -56 )
 position = Vector2( 288, -128 )
 
 [node name="GUI" parent="." instance=ExtResource( 4 )]
-
-[node name="InteractionArea" parent="." instance=ExtResource( 1 )]
-position = Vector2( 280, 224 )
 
 [node name="Coal Stacks" type="Node2D" parent="."]
 
@@ -147,13 +143,13 @@ position = Vector2( 2976, 3808 )
 position = Vector2( 2344, -2568 )
 
 [node name="WoodMinigameNode2" parent="Wood Minigames" instance=ExtResource( 8 )]
-position = Vector2( 3168, 3328 )
+position = Vector2( 3176, 3328 )
 
 [node name="WoodMinigameNode3" parent="Wood Minigames" instance=ExtResource( 8 )]
-position = Vector2( -2272, 696 )
+position = Vector2( -2232, 696 )
 
 [node name="WoodMinigameNode4" parent="Wood Minigames" instance=ExtResource( 8 )]
-position = Vector2( -2592, 696 )
+position = Vector2( -2624, 696 )
 
 [node name="Wood Pieces" type="Node2D" parent="."]
 
@@ -247,7 +243,7 @@ position = Vector2( 3040, 3872 )
 position = Vector2( 2656, -2272 )
 
 [node name="CoalMinigameNode2" parent="Coal Minigames" instance=ExtResource( 3 )]
-position = Vector2( -88, -408 )
+position = Vector2( -376, -288 )
 
 [node name="Cloth Minigames" type="Node2D" parent="."]
 
@@ -380,6 +376,9 @@ position = Vector2( -2272, -1616 )
 [node name="Coal41" parent="Coal Pieces" instance=ExtResource( 10 )]
 position = Vector2( -2400, -1232 )
 
+[node name="Coal42" parent="Coal Pieces" instance=ExtResource( 10 )]
+position = Vector2( -2336, -1424 )
+
 [connection signal="body_entered" from="HeatArea" to="GUI" method="_on_HeatArea_body_entered"]
 [connection signal="body_exited" from="HeatArea" to="GUI" method="_on_HeatArea_body_exited"]
 [connection signal="lock" from="House" to="Player" method="_on_House_lock"]
@@ -392,14 +391,9 @@ position = Vector2( -2400, -1232 )
 [connection signal="upgrade1" from="GUI" to="House" method="_on_GUI_upgrade1"]
 [connection signal="upgrade2" from="GUI" to="House" method="_on_GUI_upgrade2"]
 [connection signal="upgrade3" from="GUI" to="House" method="_on_GUI_upgrade3"]
-[connection signal="lock" from="InteractionArea" to="Player" method="_on_InteractionArea_lock"]
-[connection signal="unlock" from="InteractionArea" to="Player" method="_on_InteractionArea_unlock"]
-[connection signal="finished" from="Coal Minigames/CoalMinigameNode" to="GUI" method="_on_CoalMinigameNode_finished"]
 [connection signal="lock" from="Coal Minigames/CoalMinigameNode" to="Player" method="_on_CoalMinigameNode_lock"]
 [connection signal="unlock" from="Coal Minigames/CoalMinigameNode" to="Player" method="_on_CoalMinigameNode_unlock"]
-[connection signal="finished" from="Coal Minigames/CoalMinigameNode2" to="GUI" method="_on_CoalMinigameNode_finished"]
 [connection signal="lock" from="Coal Minigames/CoalMinigameNode2" to="Player" method="_on_CoalMinigameNode_lock"]
 [connection signal="unlock" from="Coal Minigames/CoalMinigameNode2" to="Player" method="_on_CoalMinigameNode_unlock"]
-[connection signal="completed" from="Cloth Minigames/ClothMinigameNode" to="GUI" method="_on_ClothMinigameNode_completed"]
 [connection signal="lock" from="Cloth Minigames/ClothMinigameNode" to="Player" method="_on_ClothMinigameNode_lock"]
 [connection signal="unlock" from="Cloth Minigames/ClothMinigameNode" to="Player" method="_on_ClothMinigameNode_unlock"]

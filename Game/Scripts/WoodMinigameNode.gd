@@ -17,21 +17,22 @@ func _ready():
 	connect("lock",get_parent().get_parent().get_node("Player"),"_on_lock")
 	connect("unlock",get_parent().get_parent().get_node("Player"),"_on_unlock")
 
-
 func _on_WoodMinigameNode_body_entered(body):
 	if completed:
 		return
-	if body is StaticBody2D:
-		pass
-	else:
+	elif body is TileMap:
+		return
+	elif body is KinematicBody2D:
 		inside = true
 		$Notif.visible = true
 
 
 func _on_WoodMinigameNode_body_exited(body):
 	if body is StaticBody2D:
-		pass
-	else:
+		return
+	elif body is TileMap:
+		return
+	elif body is KinematicBody2D:
 		$Notif.visible = false
 		if completed:
 			return
