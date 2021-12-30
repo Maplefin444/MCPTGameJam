@@ -16,6 +16,7 @@ signal upgrade3
 
 signal dead
 
+var dead = false
 
 
 
@@ -90,3 +91,9 @@ func _on_House_upgrade3_pressed():
 		emit_signal("upgrade3")
 	else:
 		emit_signal("poor")
+
+
+func _on_GUI_dead():
+	if not dead:
+		dead = true
+		SceneChange.change_scene("res://Scenes/Death.tscn")

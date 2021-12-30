@@ -22,7 +22,7 @@ func _physics_process(delta):
 	if decay >= 0.01:
 		decay = 0.07 - (upgrade3-1) * 0.01
 	else:
-		decay = 0.01
+		decay = 0.005
 	if retaining:
 		yield(get_tree().create_timer(upgrade1),"timeout")
 		retaining = false

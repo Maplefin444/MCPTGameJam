@@ -185,6 +185,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[connection signal="dead" from="." to="." method="_on_GUI_dead"]
 [connection signal="enter" from="." to="HeatMeter" method="_on_GUI_enter"]
 [connection signal="exit" from="." to="HeatMeter" method="_on_GUI_exit"]
 [connection signal="updatecloth" from="." to="ClothLabel" method="_on_GUI_updatecloth"]
