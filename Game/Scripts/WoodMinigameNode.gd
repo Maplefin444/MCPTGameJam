@@ -51,5 +51,6 @@ func _on_WoodMinigame_complete(tf):
 	if tf:
 		completed = true
 	running = false
+	
 	emit_signal("unlock")
 	emit_signal("finished", tf,10)

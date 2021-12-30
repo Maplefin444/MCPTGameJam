@@ -33,6 +33,8 @@ func _physics_process(delta):
 	
 	
 	if count1 == 3 and count2 == 7 and count3 == 6 and count4 == 4:
+		$Controller/Label2.visible = true
+		yield(get_tree().create_timer(1.5), "timeout")
 		emit_signal("done")
 		emit_signal("cont")
 		$Controller.visible = false

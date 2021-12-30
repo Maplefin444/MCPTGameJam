@@ -223,6 +223,9 @@ position = Vector2( -2232, 696 )
 [node name="WoodMinigameNode4" parent="Wood Minigames" instance=ExtResource( 8 )]
 position = Vector2( -2624, 696 )
 
+[node name="WoodMinigameNode5" parent="Wood Minigames" instance=ExtResource( 8 )]
+position = Vector2( 762, -356 )
+
 [node name="Wood Pieces" type="Node2D" parent="."]
 
 [node name="Wood" parent="Wood Pieces" instance=ExtResource( 11 )]
