@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=24 format=2]
 
-[ext_resource path="res://Scripts/InvButton.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Buttons/MenuButtonPress.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Tiles/cloth.png" type="Texture" id=3]
 [ext_resource path="res://Assets/wood.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Buttons/MenuButtonHover.png" type="Texture" id=5]
 [ext_resource path="res://Assets/coal.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/GUI.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/HeatMeter.gd" type="Script" id=8]
@@ -13,6 +14,13 @@
 [ext_resource path="res://Font/Size20Outline.tres" type="DynamicFont" id=12]
 [ext_resource path="res://Scripts/Vignette.gd" type="Script" id=13]
 [ext_resource path="res://Scripts/ClothLabel.gd" type="Script" id=14]
+[ext_resource path="res://Assets/Buttons/MenuButton.png" type="Texture" id=15]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=16]
+[ext_resource path="res://Assets/GUI/PanelBackground.png" type="Texture" id=17]
+[ext_resource path="res://Font/Size20.tres" type="DynamicFont" id=18]
+[ext_resource path="res://Assets/Buttons/ExitButtonHover.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Buttons/ExitButtonPress.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Buttons/ExitButton.png" type="Texture" id=21]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -46,43 +54,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PanelButton" type="Button" parent="."]
-margin_left = 9.0
-margin_top = 10.0
-margin_right = 127.0
-margin_bottom = 53.0
-text = "placeholder"
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 6.0
+margin_top = 5.0
+margin_right = 38.0
+margin_bottom = 21.0
+rect_scale = Vector2( 3, 3 )
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 1 )
+texture_hover = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Holder" type="Panel" parent="."]
-visible = false
-margin_left = 214.0
-margin_top = 104.0
-margin_right = 829.0
-margin_bottom = 517.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Decrement" type="Button" parent="Holder"]
-margin_left = 32.0
-margin_top = 91.0
-margin_right = 177.0
-margin_bottom = 130.0
-text = "-"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Increment" type="Button" parent="Holder"]
-margin_left = 32.0
-margin_top = 23.0
-margin_right = 177.0
-margin_bottom = 62.0
-text = "+"
 
 [node name="CoalLabel" type="RichTextLabel" parent="."]
 margin_left = 28.0
@@ -116,9 +99,9 @@ __meta__ = {
 
 [node name="ClothLabel" type="RichTextLabel" parent="."]
 margin_left = 28.0
-margin_top = 133.0
+margin_top = 127.0
 margin_right = 234.0
-margin_bottom = 157.0
+margin_bottom = 151.0
 rect_pivot_offset = Vector2( 62, 8 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 12 )
@@ -140,7 +123,7 @@ scale = Vector2( 3.5, 3.5 )
 texture = ExtResource( 4 )
 
 [node name="ClothSprite" type="Sprite" parent="."]
-position = Vector2( 20, 141.375 )
+position = Vector2( 20, 137 )
 scale = Vector2( 1.79688, 1.79688 )
 texture = ExtResource( 3 )
 
@@ -160,16 +143,56 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Panel" type="NinePatchRect" parent="."]
+visible = false
+margin_left = 259.0
+margin_top = 127.0
+margin_right = 785.0
+margin_bottom = 434.0
+texture = ExtResource( 17 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 23.0
+margin_top = 18.0
+margin_right = 81.0
+margin_bottom = 38.0
+custom_fonts/font = ExtResource( 18 )
+text = "Heat Retension:
+
+Heat Limit:
+
+Heat Decay:
+"
+
+[node name="ExitButton" type="TextureButton" parent="Panel"]
+margin_left = 333.0
+margin_top = 108.0
+margin_right = 365.0
+margin_bottom = 124.0
+rect_scale = Vector2( 5, 5 )
+texture_normal = ExtResource( 21 )
+texture_pressed = ExtResource( 20 )
+texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [connection signal="enter" from="." to="HeatMeter" method="_on_GUI_enter"]
 [connection signal="exit" from="." to="HeatMeter" method="_on_GUI_exit"]
 [connection signal="updatecloth" from="." to="ClothLabel" method="_on_GUI_updatecloth"]
 [connection signal="updatecoal" from="." to="CoalLabel" method="_on_GUI_updatecoal"]
 [connection signal="updatewood" from="." to="WoodLabel" method="_on_GUI_updatewood"]
 [connection signal="upgrade1" from="." to="HeatMeter" method="_on_GUI_upgrade1"]
-[connection signal="pressed" from="PanelButton" to="Holder" method="_on_Button_pressed"]
-[connection signal="update" from="Holder" to="CoalLabel" method="_on_Holder_update"]
-[connection signal="pressed" from="Holder/Decrement" to="Holder" method="_on_Decrement_pressed"]
-[connection signal="pressed" from="Holder/Increment" to="Holder" method="_on_Increment_pressed"]
+[connection signal="pressed" from="TextureButton" to="Panel" method="_on_TextureButton_pressed"]
 [connection signal="dead" from="HeatMeter" to="." method="_on_HeatMeter_dead"]
 [connection signal="gone" from="HeatMeter" to="ColorRect" method="_on_HeatMeter_gone"]
 [connection signal="show" from="HeatMeter" to="ColorRect" method="_on_HeatMeter_show"]
+[connection signal="pressed" from="Panel/ExitButton" to="Panel" method="_on_ExitButton_pressed"]
