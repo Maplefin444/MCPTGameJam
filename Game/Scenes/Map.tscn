@@ -37,6 +37,9 @@ position = Vector2( 280, 224 )
 [node name="CoalStack" parent="Coal Stacks" instance=ExtResource( 13 )]
 position = Vector2( -368, 127 )
 
+[node name="CoalStack2" parent="Coal Stacks" instance=ExtResource( 13 )]
+position = Vector2( -471, 32 )
+
 [node name="Wood Stacks" type="Node2D" parent="."]
 
 [node name="WoodStack" parent="Wood Stacks" instance=ExtResource( 14 )]
