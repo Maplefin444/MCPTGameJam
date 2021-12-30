@@ -66,7 +66,6 @@ func _on_CoalMinigameNode_lock():
 		object_arr[i] = draggableItem.instance()
 		holder.add_child(object_arr[i])
 		object_arr[i].visible = true
-		print(object_arr[i])
 	off = false
 
 
