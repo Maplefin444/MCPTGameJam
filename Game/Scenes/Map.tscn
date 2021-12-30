@@ -35,9 +35,7 @@ position = Vector2( 288, -128 )
 position = Vector2( -368, 127 )
 
 [node name="CoalStack2" parent="Coal Stacks" instance=ExtResource( 13 )]
-<<<<<<< HEAD
-position = Vector2( -471, 32 )
-=======
+
 position = Vector2( 456, -8 )
 
 [node name="CoalStack3" parent="Coal Stacks" instance=ExtResource( 13 )]
@@ -63,7 +61,6 @@ position = Vector2( -2528, 800 )
 
 [node name="CoalStack10" parent="Coal Stacks" instance=ExtResource( 13 )]
 position = Vector2( -2528, 608 )
->>>>>>> c9ba0f214a885e63c53db4d8e2e11bb003374142
 
 [node name="Wood Stacks" type="Node2D" parent="."]
 
