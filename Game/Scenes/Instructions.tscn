@@ -48,14 +48,13 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 344.0
-margin_top = 112.0
-margin_right = 612.0
-margin_bottom = 132.0
+margin_left = 378.0
+margin_top = 98.0
+margin_right = 646.0
+margin_bottom = 118.0
 rect_pivot_offset = Vector2( 96, 24 )
 custom_fonts/font = ExtResource( 6 )
 text = "Use \"WASD\" to move."
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,13 +104,12 @@ __meta__ = {
 }
 
 [node name="Label3" type="Label" parent="."]
-margin_left = 344.0
-margin_top = 200.0
-margin_right = 806.0
-margin_bottom = 220.0
+margin_left = 378.0
+margin_top = 186.0
+margin_right = 840.0
+margin_bottom = 206.0
 custom_fonts/font = ExtResource( 6 )
 text = "Use \"E\" to interact when prompted."
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -128,10 +126,10 @@ __meta__ = {
 }
 
 [node name="TextureRect6" type="TextureRect" parent="."]
-margin_left = 136.0
-margin_top = 280.0
-margin_right = 152.0
-margin_bottom = 296.0
+margin_left = 139.0
+margin_top = 264.0
+margin_right = 155.0
+margin_bottom = 280.0
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 14 )
 __meta__ = {
@@ -139,10 +137,10 @@ __meta__ = {
 }
 
 [node name="TextureRect7" type="TextureRect" parent="."]
-margin_left = 264.0
-margin_top = 280.0
-margin_right = 280.0
-margin_bottom = 296.0
+margin_left = 267.0
+margin_top = 264.0
+margin_right = 283.0
+margin_bottom = 280.0
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 9 )
 __meta__ = {
@@ -150,10 +148,10 @@ __meta__ = {
 }
 
 [node name="TextureRect8" type="TextureRect" parent="."]
-margin_left = 200.0
-margin_top = 280.0
-margin_right = 216.0
-margin_bottom = 296.0
+margin_left = 203.0
+margin_top = 264.0
+margin_right = 219.0
+margin_bottom = 280.0
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -161,22 +159,21 @@ __meta__ = {
 }
 
 [node name="Label4" type="Label" parent="."]
-margin_left = 344.0
-margin_top = 296.0
-margin_right = 806.0
-margin_bottom = 316.0
+margin_left = 378.0
+margin_top = 282.0
+margin_right = 840.0
+margin_bottom = 302.0
 custom_fonts/font = ExtResource( 6 )
 text = "Use \"SPACE\" to continue dialogue."
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureRect9" type="TextureRect" parent="."]
-margin_left = 216.0
-margin_top = 360.0
-margin_right = 232.0
-margin_bottom = 376.0
+margin_left = 209.0
+margin_top = 347.0
+margin_right = 225.0
+margin_bottom = 363.0
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 15 )
 __meta__ = {
@@ -184,14 +181,13 @@ __meta__ = {
 }
 
 [node name="Label5" type="Label" parent="."]
-margin_left = 344.0
-margin_top = 368.0
-margin_right = 806.0
-margin_bottom = 411.0
+margin_left = 378.0
+margin_top = 354.0
+margin_right = 840.0
+margin_bottom = 397.0
 custom_fonts/font = ExtResource( 6 )
 text = "Click to pick up resources, unless 
 prompted to interact."
-align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -219,13 +215,13 @@ __meta__ = {
 }
 
 [node name="Label6" type="Label" parent="."]
-margin_left = 344.0
-margin_top = 464.0
-margin_right = 806.0
-margin_bottom = 484.0
+margin_left = 378.0
+margin_top = 450.0
+margin_right = 840.0
+margin_bottom = 493.0
 custom_fonts/font = ExtResource( 6 )
-text = "Be careful of your temperature!"
-align = 1
+text = "Watch your temperature closely!
+When the bar reaches 0, you lose."
 __meta__ = {
 "_edit_use_anchors_": false
 }
