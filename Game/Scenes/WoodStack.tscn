@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://WoodStack.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/WoodStack.gd" type="Script" id=1]
 [ext_resource path="res://Font/Size10Outline.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/Tiles/logs.png" type="Texture" id=3]
 

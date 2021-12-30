@@ -1,18 +1,246 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/Instructions.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GUI/PanelBackground.png" type="Texture" id=2]
+[ext_resource path="res://Assets/StartPress.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Start.png" type="Texture" id=4]
+[ext_resource path="res://Assets/StartHover.png" type="Texture" id=5]
+[ext_resource path="res://Font/Size20.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Assets/Buttons/tile_0359.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Buttons/tile_0508.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Buttons/tile_0509.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Buttons/tile_0392.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Buttons/tile_0394.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Buttons/tile_0358.png" type="Texture" id=12]
+[ext_resource path="res://Assets/Buttons/tile_0393.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Buttons/tile_0507.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Buttons/tile_0077.png" type="Texture" id=15]
+[ext_resource path="res://Assets/GUI/TempFill.png" type="Texture" id=16]
+[ext_resource path="res://Assets/GUI/TempBar.png" type="Texture" id=17]
 
 [node name="Instructions" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 424.0
-margin_top = 248.0
-margin_right = 600.0
-margin_bottom = 268.0
-text = "gogoggo"
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = -128.0
+margin_top = -192.0
+margin_right = 1224.0
+margin_bottom = 808.0
+texture = ExtResource( 2 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[node name="Label" type="Label" parent="."]
+margin_left = 416.0
+margin_top = 24.0
+margin_right = 608.0
+margin_bottom = 44.0
+custom_fonts/font = ExtResource( 6 )
+text = "Instructions"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 112.0
+margin_right = 612.0
+margin_bottom = 132.0
+rect_pivot_offset = Vector2( 96, 24 )
+custom_fonts/font = ExtResource( 6 )
+text = "Use \"WASD\" to move."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 208.0
+margin_top = 24.0
+margin_right = 224.0
+margin_bottom = 40.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+margin_left = 208.0
+margin_top = 88.0
+margin_right = 224.0
+margin_bottom = 104.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = 264.0
+margin_top = 88.0
+margin_right = 280.0
+margin_bottom = 104.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+margin_left = 152.0
+margin_top = 88.0
+margin_right = 168.0
+margin_bottom = 104.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 200.0
+margin_right = 806.0
+margin_bottom = 220.0
+custom_fonts/font = ExtResource( 6 )
+text = "Use \"E\" to interact when prompted."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+margin_left = 208.0
+margin_top = 176.0
+margin_right = 224.0
+margin_bottom = 192.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+margin_left = 136.0
+margin_top = 280.0
+margin_right = 152.0
+margin_bottom = 296.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+margin_left = 264.0
+margin_top = 280.0
+margin_right = 280.0
+margin_bottom = 296.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect8" type="TextureRect" parent="."]
+margin_left = 200.0
+margin_top = 280.0
+margin_right = 216.0
+margin_bottom = 296.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 296.0
+margin_right = 806.0
+margin_bottom = 316.0
+custom_fonts/font = ExtResource( 6 )
+text = "Use \"SPACE\" to continue dialogue."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect9" type="TextureRect" parent="."]
+margin_left = 216.0
+margin_top = 360.0
+margin_right = 232.0
+margin_bottom = 376.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 368.0
+margin_right = 806.0
+margin_bottom = 411.0
+custom_fonts/font = ExtResource( 6 )
+text = "Click to pick up resources, unless 
+prompted to interact."
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect11" type="TextureRect" parent="."]
+margin_left = 136.0
+margin_top = 456.0
+margin_right = 186.0
+margin_bottom = 466.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect10" type="TextureRect" parent="."]
+margin_left = 136.0
+margin_top = 456.0
+margin_right = 186.0
+margin_bottom = 466.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 344.0
+margin_top = 464.0
+margin_right = 806.0
+margin_bottom = 484.0
+custom_fonts/font = ExtResource( 6 )
+text = "Be careful of your temperature!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 432.0
+margin_top = 520.0
+margin_right = 474.0
+margin_bottom = 537.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

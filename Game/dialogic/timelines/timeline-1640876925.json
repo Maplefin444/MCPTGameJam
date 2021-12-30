@@ -1,6 +1,69 @@
 {
 	"events": [
-
+		{
+			"action": "join",
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": true,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Ahh.. What a great vacation..."
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Absolutely nobody in a 15-kilometer radius, and this log cabin all to myself..."
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The snow's sure getting hard out there, but I'm inside..."
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "The snow really is getting hard, I should check outside."
+		},
+		{
+			"emit_signal": "",
+			"event_id": "dialogic_040"
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "This is a full-on snowstorm!!"
+		},
+		{
+			"character": "character-1640640274.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "I should get back to the city as soon as possible!"
+		},
+		{
+			"call_node": {
+				"arguments": [
+					"res://Scenes/Map.tscn"
+				],
+				"method_name": "change_scene",
+				"target_node_path": "SceneChange"
+			},
+			"event_id": "dialogic_042"
+		}
 	],
 	"metadata": {
 		"dialogic-version": "1.3",
