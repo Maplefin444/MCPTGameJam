@@ -1,4 +1,5 @@
 extends RichTextLabel
+
 var value = 0
 var updated = false
 

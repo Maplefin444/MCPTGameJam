@@ -8,9 +8,11 @@ signal updatecoal(num)
 signal updatewood(num)
 signal updatecloth(num)
 
-signal upgrade1
-
 signal poor
+
+signal upgrade1
+signal upgrade2
+signal upgrade3
 
 signal dead
 
@@ -24,8 +26,9 @@ func _on_HeatArea_body_exited(body):
 
 
 func _on_House_upgrade1_pressed():
-	if $CoalLabel.value >= 5:
-		$CoalLabel.value -= 5
+	if $CoalLabel.value >= 5*$HeatMeter.upgrade1:
+		$CoalLabel.value -= 5*$HeatMeter.upgrade1
+		$HeatMeter.upgrade1 += 1
 		emit_signal("upgrade1")
 	else:
 		emit_signal("poor")
@@ -68,3 +71,21 @@ func _on_CoalStack_coal_picked():
 
 func _on_WoodStack_wood_picked():
 	emit_signal("updatewood",3)
+
+
+func _on_House_upgrade2_pressed():
+	if $WoodLabel.value >= 5*$HeatMeter.upgrade2:
+		$WoodLabel.value -= 5*$HeatMeter.upgrade2
+		$HeatMeter.upgrade2 += 1
+		emit_signal("upgrade2")
+	else:
+		emit_signal("poor")
+
+
+func _on_House_upgrade3_pressed():
+	if $ClothLabel.value >= 5*$HeatMeter.upgrade3:
+		$ClothLabel.value -= 5*$HeatMeter.upgrade3
+		$HeatMeter.upgrade3 += 1
+		emit_signal("upgrade3")
+	else:
+		emit_signal("poor")

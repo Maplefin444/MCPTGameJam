@@ -87,12 +87,13 @@ text = "+"
 [node name="CoalLabel" type="RichTextLabel" parent="."]
 margin_left = 28.0
 margin_top = 96.0
-margin_right = 152.0
+margin_right = 246.0
 margin_bottom = 117.0
 rect_pivot_offset = Vector2( 62, 8 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 12 )
 text = " Coal: 0"
+scroll_active = false
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -101,7 +102,7 @@ __meta__ = {
 [node name="WoodLabel" type="RichTextLabel" parent="."]
 margin_left = 28.0
 margin_top = 64.0
-margin_right = 152.0
+margin_right = 246.0
 margin_bottom = 84.0
 rect_pivot_offset = Vector2( 62, 8 )
 mouse_filter = 2
@@ -115,13 +116,14 @@ __meta__ = {
 
 [node name="ClothLabel" type="RichTextLabel" parent="."]
 margin_left = 28.0
-margin_top = 133.375
-margin_right = 152.0
-margin_bottom = 157.375
+margin_top = 133.0
+margin_right = 234.0
+margin_bottom = 157.0
 rect_pivot_offset = Vector2( 62, 8 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 12 )
 text = " Cloth: 0"
+scroll_active = false
 script = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false

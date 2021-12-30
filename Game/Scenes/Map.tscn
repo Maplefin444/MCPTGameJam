@@ -19,8 +19,6 @@
 
 [node name="Background" parent="." instance=ExtResource( 7 )]
 
-[node name="GUI" parent="." instance=ExtResource( 4 )]
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
 [node name="HeatArea" parent="." instance=ExtResource( 5 )]
@@ -28,6 +26,8 @@ position = Vector2( 240, -80 )
 
 [node name="House" parent="." instance=ExtResource( 6 )]
 position = Vector2( 246, -152 )
+
+[node name="GUI" parent="." instance=ExtResource( 4 )]
 
 [node name="InteractionArea" parent="." instance=ExtResource( 1 )]
 position = Vector2( 280, 224 )
@@ -75,13 +75,18 @@ position = Vector2( -152, 112 )
 [node name="Coal" parent="Coal Pieces" instance=ExtResource( 10 )]
 position = Vector2( -80, -200 )
 
-[connection signal="dead" from="GUI" to="Player" method="_on_GUI_dead"]
-[connection signal="poor" from="GUI" to="House" method="_on_GUI_poor"]
 [connection signal="body_entered" from="HeatArea" to="GUI" method="_on_HeatArea_body_entered"]
 [connection signal="body_exited" from="HeatArea" to="GUI" method="_on_HeatArea_body_exited"]
 [connection signal="lock" from="House" to="Player" method="_on_House_lock"]
 [connection signal="unlock" from="House" to="Player" method="_on_House_unlock"]
 [connection signal="upgrade1_pressed" from="House" to="GUI" method="_on_House_upgrade1_pressed"]
+[connection signal="upgrade2_pressed" from="House" to="GUI" method="_on_House_upgrade2_pressed"]
+[connection signal="upgrade3_pressed" from="House" to="GUI" method="_on_House_upgrade3_pressed"]
+[connection signal="dead" from="GUI" to="Player" method="_on_GUI_dead"]
+[connection signal="poor" from="GUI" to="House" method="_on_GUI_poor"]
+[connection signal="upgrade1" from="GUI" to="House" method="_on_GUI_upgrade1"]
+[connection signal="upgrade2" from="GUI" to="House" method="_on_GUI_upgrade2"]
+[connection signal="upgrade3" from="GUI" to="House" method="_on_GUI_upgrade3"]
 [connection signal="lock" from="InteractionArea" to="Player" method="_on_InteractionArea_lock"]
 [connection signal="unlock" from="InteractionArea" to="Player" method="_on_InteractionArea_unlock"]
 [connection signal="finished" from="Coal Minigames/CoalMinigameNode" to="GUI" method="_on_CoalMinigameNode_finished"]

@@ -36,10 +36,10 @@ texture = ExtResource( 1 )
 visible = false
 
 [node name="Panel" type="NinePatchRect" parent="CanvasLayer/Controller"]
-margin_left = 40.0
-margin_top = 16.0
-margin_right = 984.0
-margin_bottom = 576.0
+margin_left = 112.0
+margin_top = 111.0
+margin_right = 920.0
+margin_bottom = 568.0
 texture = ExtResource( 11 )
 patch_margin_left = 5
 patch_margin_top = 5
@@ -51,10 +51,11 @@ __meta__ = {
 
 [node name="PoorNotif" type="Label" parent="CanvasLayer/Controller"]
 visible = false
+modulate = Color( 1, 0.301961, 0.301961, 1 )
 margin_left = 360.0
-margin_top = 128.0
+margin_top = 456.0
 margin_right = 664.0
-margin_bottom = 148.0
+margin_bottom = 476.0
 custom_fonts/font = ExtResource( 7 )
 text = "Not Enough Resources!"
 align = 1
@@ -76,12 +77,64 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BuyButton1" type="TextureButton" parent="CanvasLayer/Controller"]
-margin_left = 128.0
-margin_top = 64.0
-margin_right = 176.0
-margin_bottom = 96.0
+[node name="BuyButton3" type="TextureButton" parent="CanvasLayer/Controller"]
+margin_left = 184.0
+margin_top = 408.0
+margin_right = 232.0
+margin_bottom = 440.0
 rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 44, 24.5 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="CanvasLayer/Controller"]
+margin_left = 256.0
+margin_top = 400.0
+margin_right = 960.0
+margin_bottom = 420.0
+custom_fonts/font = ExtResource( 7 )
+text = "5 Cloth - Coat Upgrade (Reduces Heat Decay)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyButton2" type="TextureButton" parent="CanvasLayer/Controller"]
+margin_left = 184.0
+margin_top = 296.0
+margin_right = 232.0
+margin_bottom = 328.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 44, 24.5 )
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 9 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/Controller"]
+margin_left = 256.0
+margin_top = 296.0
+margin_right = 960.0
+margin_bottom = 316.0
+custom_fonts/font = ExtResource( 7 )
+text = "5 Wood - Campfire Upgrade (Heat Meter Increase)"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BuyButton1" type="TextureButton" parent="CanvasLayer/Controller"]
+margin_left = 184.0
+margin_top = 192.0
+margin_right = 232.0
+margin_bottom = 224.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 44, 24.5 )
 texture_normal = ExtResource( 10 )
 texture_pressed = ExtResource( 9 )
 texture_hover = ExtResource( 8 )
@@ -91,20 +144,21 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="CanvasLayer/Controller"]
 margin_left = 256.0
-margin_top = 88.0
-margin_right = 338.0
-margin_bottom = 108.0
+margin_top = 192.0
+margin_right = 960.0
+margin_bottom = 212.0
 custom_fonts/font = ExtResource( 7 )
 text = "5 Coal - Torch Upgrade (Delays Heat Decay)"
+autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Title" type="Label" parent="CanvasLayer/Controller"]
 margin_left = 440.0
-margin_top = 32.0
+margin_top = 136.0
 margin_right = 584.0
-margin_bottom = 52.0
+margin_bottom = 156.0
 custom_fonts/font = ExtResource( 7 )
 text = "Upgrades"
 align = 1
@@ -136,4 +190,6 @@ shape = SubResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_House_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_House_body_exited"]
 [connection signal="pressed" from="CanvasLayer/Controller/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Controller/BuyButton3" to="." method="_on_BuyButton3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Controller/BuyButton2" to="." method="_on_BuyButton2_pressed"]
 [connection signal="pressed" from="CanvasLayer/Controller/BuyButton1" to="." method="_on_BuyButton1_pressed"]
