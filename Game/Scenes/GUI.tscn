@@ -68,10 +68,10 @@ __meta__ = {
 }
 
 [node name="CoalLabel" type="RichTextLabel" parent="."]
-margin_left = 28.0
-margin_top = 96.0
-margin_right = 246.0
-margin_bottom = 117.0
+margin_left = 26.625
+margin_top = 61.625
+margin_right = 244.625
+margin_bottom = 82.625
 rect_pivot_offset = Vector2( 62, 8 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 12 )
@@ -83,10 +83,10 @@ __meta__ = {
 }
 
 [node name="WoodLabel" type="RichTextLabel" parent="."]
-margin_left = 28.0
-margin_top = 64.0
-margin_right = 246.0
-margin_bottom = 84.0
+margin_left = 29.0
+margin_top = 96.0
+margin_right = 247.0
+margin_bottom = 116.0
 rect_pivot_offset = Vector2( 62, 8 )
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 12 )
@@ -113,12 +113,12 @@ __meta__ = {
 }
 
 [node name="CoalSprite" type="Sprite" parent="."]
-position = Vector2( 21, 104 )
+position = Vector2( 19.625, 69.625 )
 scale = Vector2( 3.40625, 3.40625 )
 texture = ExtResource( 6 )
 
 [node name="WoodSprite" type="Sprite" parent="."]
-position = Vector2( 23, 70 )
+position = Vector2( 19, 102 )
 scale = Vector2( 3.5, 3.5 )
 texture = ExtResource( 4 )
 
