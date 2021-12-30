@@ -144,6 +144,7 @@ __meta__ = {
 }
 
 [node name="Panel" type="NinePatchRect" parent="."]
+visible = false
 margin_left = 259.0
 margin_top = 127.0
 margin_right = 785.0
