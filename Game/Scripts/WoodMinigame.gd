@@ -22,7 +22,7 @@ func _physics_process(delta):
 	$Controller/HitObject/CollisionShape2D.position = Vector2(y,303)
 	if count == 3:
 		emit_signal("complete",true)
-		yield(get_tree().create_timer(1.5), "timeout")
+		yield(get_tree().create_timer(0.5), "timeout")
 		$Controller.visible = false
 		off = true
 
