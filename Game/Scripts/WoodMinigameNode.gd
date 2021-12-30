@@ -12,6 +12,11 @@ var running = false
 
 var completed = false
 
+func _ready():
+	connect("finished",get_parent().get_parent().get_node("GUI"),"_on_WoodMinigameNode_finished")
+	connect("lock",get_parent().get_parent().get_node("Player"),"_on_lock")
+	connect("unlock",get_parent().get_parent().get_node("Player"),"_on_unlock")
+
 
 func _on_WoodMinigameNode_body_entered(body):
 	if completed:
@@ -42,7 +47,8 @@ func _input(event):
 
 
 func _on_WoodMinigame_complete(tf):
-	completed = true
+	if tf:
+		completed = true
 	running = false
 	emit_signal("unlock")
 	emit_signal("finished", tf,10)

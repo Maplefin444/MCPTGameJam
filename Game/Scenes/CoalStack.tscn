@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font/Size10Outline.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Tiles/coal.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/CoalStack.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31.25, 31.25 )
+
+[node name="CoalStack" type="Area2D"]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 3.6875, 3.6875 )
+texture = ExtResource( 2 )
+
+[node name="Notif" type="Label" parent="."]
+visible = false
+margin_left = -80.0
+margin_top = -32.0
+margin_right = 80.0
+margin_bottom = -16.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Click to pick up"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="." to="." method="_on_CoalStack_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_CoalStack_body_exited"]
+[connection signal="input_event" from="." to="." method="_on_CoalStack_input_event"]

@@ -18,4 +18,3 @@ func initialized():
 	bY /= 2
 	self.set_position(Vector2(200 + bX, 230 + bY))
 	num = texture.get_size().y * s
-	print(num)

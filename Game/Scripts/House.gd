@@ -3,8 +3,19 @@ extends Area2D
 var inside = false
 var alr = false
 signal upgrade1_pressed
+signal upgrade2_pressed
+signal upgrade3_pressed
 signal lock
 signal unlock
+
+var upgrade1 = 1
+var upgrade2 = 1
+var upgrade3 = 1
+
+func _physics_process(delta):
+	$CanvasLayer/Controller/Label.text = String(upgrade1*5) + " Coal - Torch Upgrade (Delays Heat Decay)"
+	$CanvasLayer/Controller/Label2.text = String(upgrade2*5) + " Wood - Campfire Upgrade (Heat Meter Increase)"
+	$CanvasLayer/Controller/Label3.text = String(upgrade3*5) + " Cloth - Coat Upgrade (Reduces Heat Decay)"
 
 func _input(event):
 	if Input.is_action_just_pressed("interact") && inside && not alr:
@@ -43,3 +54,23 @@ func _on_GUI_poor():
 
 func _on_BuyButton1_pressed():
 	emit_signal("upgrade1_pressed")
+
+
+func _on_BuyButton2_pressed():
+	emit_signal("upgrade2_pressed")
+
+
+func _on_BuyButton3_pressed():
+	emit_signal("upgrade3_pressed")
+
+
+func _on_GUI_upgrade1():
+	upgrade1 +=1
+
+
+func _on_GUI_upgrade2():
+	upgrade2 +=1
+
+
+func _on_GUI_upgrade3():
+	upgrade3 +=1

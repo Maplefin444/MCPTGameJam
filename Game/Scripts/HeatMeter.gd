@@ -3,7 +3,9 @@ extends TextureProgress
 var heated = false
 var decay = 0.07
 var build = 0.5
-var retain_level = 1
+var upgrade1 = 1
+var upgrade2 = 1
+var upgrade3 = 1
 var retaining = true
 var speedup = 0
 
@@ -16,8 +18,13 @@ func _ready():
 	value = 100
 
 func _physics_process(delta):
+	max_value = 100 + (upgrade2-1)*10
+	if decay >= 0.01:
+		decay = 0.07 - (upgrade3-1) * 0.01
+	else:
+		decay = 0.01
 	if retaining:
-		yield(get_tree().create_timer(retain_level*3),"timeout")
+		yield(get_tree().create_timer(upgrade1),"timeout")
 		retaining = false
 	if not heated && not retaining:
 		value -= decay
@@ -43,6 +50,3 @@ func _on_GUI_exit():
 	heated = false
 	retaining = true
 
-
-func _on_GUI_upgrade1():
-	retain_level += 1

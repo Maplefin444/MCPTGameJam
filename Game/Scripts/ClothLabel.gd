@@ -4,7 +4,7 @@ var value = 0
 var updated = false
 
 func _physics_process(delta):
-	text = "Cloth: " + String(value)
+	text = " Cloth: " + String(value)
 
 
 func _on_GUI_updatecloth(num):

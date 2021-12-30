@@ -51,12 +51,16 @@ _global_script_class_icons={
 [application]
 
 config/name="Game Jam"
-run/main_scene="res://Scenes/MainScene.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 SceneChange="*res://Scenes/SceneChange.tscn"
+
+[display]
+
+window/size/resizable=false
 
 [editor_plugins]
 

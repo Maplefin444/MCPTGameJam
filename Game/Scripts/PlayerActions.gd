@@ -44,6 +44,12 @@ func movement_anim():
 func _on_InteractionArea_lock():
 	locked = true
 
+func _on_lock():
+	locked = true
+
+func _on_unlock():
+	locked = false
+
 func _on_InteractionArea_unlock():
 	locked = false
 
@@ -62,10 +68,6 @@ func _on_House_unlock():
 func _on_GUI_dead():
 	print("temporary death")
 
-func _on_ClothMinigameNode_lock():
-	locked = true
-
-func _on_ClothMinigameNode_unlock():
 	locked = false
 
 func _on_WoodMinigameNode_lock():
