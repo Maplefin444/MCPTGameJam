@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Tiles/cloth.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 22.5, 22.5 )
+extents = Vector2( 31.25, 31.25 )
 
 [node name="Cloth" type="Area2D"]
 script = ExtResource( 1 )
@@ -14,8 +14,8 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( -9.53674e-07, -9.53674e-07 )
-scale = Vector2( 1.875, 1.875 )
+position = Vector2( -1.90735e-06, -1.90735e-06 )
+scale = Vector2( 2.9375, 2.9375 )
 texture = ExtResource( 3 )
 
 [node name="Notif" type="Label" parent="."]
