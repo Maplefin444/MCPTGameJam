@@ -43,8 +43,6 @@ func _physics_process(delta):
 			emit_signal("done")
 			emit_signal("cont") 
 		$Controller.visible = false
-		if holder != null:
-			remove_child(holder)
 
 
 func _on_Button_pressed():

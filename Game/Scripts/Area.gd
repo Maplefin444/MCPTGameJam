@@ -16,8 +16,8 @@ func _ready():
 
 func _on_CoalMinigameNode_body_entered(body):
 	if body is StaticBody2D:
-		pass
-	else:
+		return
+	elif body is KinematicBody2D:
 		inside = true
 		if completed:
 			return
@@ -26,8 +26,8 @@ func _on_CoalMinigameNode_body_entered(body):
 
 func _on_CoalMinigameNode_body_exited(body):
 	if body is StaticBody2D:
-		pass
-	else:
+		return
+	elif body is KinematicBody2D:
 		inside = false
 		$Notif.visible = false
 		if completed:
