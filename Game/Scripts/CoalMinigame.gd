@@ -6,8 +6,11 @@ onready var a1 = get_node("Controller/3")
 onready var a2 = get_node("Controller/7")
 onready var a3 = get_node("Controller/6")
 onready var a4 = get_node("Controller/4")
+onready var holder = Node2D.new()
 signal cont
 signal done(res)
+
+var sent = false
 var object_arr = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
 
 
@@ -34,13 +37,14 @@ func _physics_process(delta):
 	
 	if count1 == 3 and count2 == 7 and count3 == 6 and count4 == 4:
 		$Controller/Label2.visible = true
-		yield(get_tree().create_timer(1.5), "timeout")
-		emit_signal("done")
-		emit_signal("cont")
+		yield(get_tree().create_timer(0.5), "timeout")
+		if not sent:
+			sent = true
+			emit_signal("done")
+			emit_signal("cont") 
 		$Controller.visible = false
-		for i in range(20):
-			object_arr[i].visible = false
-			remove_child(object_arr[i])
+		if holder != null:
+			remove_child(holder)
 
 
 func _on_Button_pressed():
@@ -48,18 +52,21 @@ func _on_Button_pressed():
 		return
 	emit_signal("cont")
 	$Controller.visible = false
-	for i in range(20):
-		object_arr[i].visible = false
-		object_arr[i].queue_free()
+	holder.visible = false
+	holder.queue_free()
 	off = true
 
 
 func _on_CoalMinigameNode_lock():
+	holder = Node2D.new()
+	$Controller.add_child(holder)
+	holder.visible = true
 	object_arr = [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
 	for i in range(20):
 		object_arr[i] = draggableItem.instance()
-		object_arr[i] .visible = true
-		add_child(object_arr[i])
+		holder.add_child(object_arr[i])
+		object_arr[i].visible = true
+		print(object_arr[i])
 	off = false
 
 
