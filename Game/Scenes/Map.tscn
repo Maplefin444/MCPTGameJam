@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Map.gd" type="Script" id=1]
+=======
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/ResourceGen.gd" type="Script" id=1]
+>>>>>>> Stashed changes
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/CoalMinigameNode.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=4]
