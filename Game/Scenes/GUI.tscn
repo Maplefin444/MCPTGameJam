@@ -144,7 +144,6 @@ __meta__ = {
 }
 
 [node name="Panel" type="NinePatchRect" parent="."]
-visible = false
 margin_left = 259.0
 margin_top = 127.0
 margin_right = 785.0
@@ -173,11 +172,11 @@ Heat Decay:
 "
 
 [node name="ExitButton" type="TextureButton" parent="Panel"]
-margin_left = 333.0
-margin_top = 108.0
-margin_right = 365.0
-margin_bottom = 124.0
-rect_scale = Vector2( 5, 5 )
+margin_left = 384.0
+margin_top = 230.0
+margin_right = 416.0
+margin_bottom = 246.0
+rect_scale = Vector2( 4, 4 )
 texture_normal = ExtResource( 21 )
 texture_pressed = ExtResource( 20 )
 texture_hover = ExtResource( 19 )
