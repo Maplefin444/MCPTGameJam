@@ -67,7 +67,7 @@ position = Vector2( -2528, 800 )
 position = Vector2( -2528, 608 )
 
 [node name="CoalStack11" parent="Coal Stacks" instance=ExtResource( 13 )]
-position = Vector2( -589, 2579 )
+position = Vector2( 755, 3082 )
 
 [node name="CoalStack12" parent="Coal Stacks" instance=ExtResource( 13 )]
 position = Vector2( 456, -8 )
@@ -215,7 +215,7 @@ position = Vector2( 3104, 3872 )
 position = Vector2( 2976, 3808 )
 
 [node name="Cloth17" parent="Cloth Pieces" instance=ExtResource( 12 )]
-position = Vector2( -1133, 2779 )
+position = Vector2( -1311, 3000 )
 
 [node name="Cloth18" parent="Cloth Pieces" instance=ExtResource( 12 )]
 position = Vector2( 1987, 1590 )
@@ -453,13 +453,13 @@ position = Vector2( -1211, -2469 )
 position = Vector2( -1275, -2517 )
 
 [node name="Wood51" parent="Wood Pieces" instance=ExtResource( 11 )]
-position = Vector2( -1110, 2203 )
+position = Vector2( -373, 1915 )
 
 [node name="Wood52" parent="Wood Pieces" instance=ExtResource( 11 )]
-position = Vector2( -1167, 2052 )
+position = Vector2( -1341, 2081 )
 
 [node name="Wood53" parent="Wood Pieces" instance=ExtResource( 11 )]
-position = Vector2( -881, 2175 )
+position = Vector2( -1465, 2841 )
 
 [node name="Wood54" parent="Wood Pieces" instance=ExtResource( 11 )]
 position = Vector2( 711, 2273 )
@@ -471,7 +471,7 @@ position = Vector2( 586, 2788 )
 position = Vector2( 581, 2447 )
 
 [node name="Wood57" parent="Wood Pieces" instance=ExtResource( 11 )]
-position = Vector2( 360, 1976 )
+position = Vector2( 621, 1976 )
 
 [node name="Wood58" parent="Wood Pieces" instance=ExtResource( 11 )]
 position = Vector2( 711, 2465 )
