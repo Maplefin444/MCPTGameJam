@@ -38,8 +38,8 @@ func _on_ClothMinigameNode_body_entered(body):
 	if completed:
 		return
 	if body is StaticBody2D:
-		pass
-	else:
+		return
+	elif body is KinematicBody2D:
 		inside = true
 		$Notif.visible = true
 
@@ -47,7 +47,7 @@ func _on_ClothMinigameNode_body_entered(body):
 func _on_ClothMinigameNode_body_exited(body):
 	if body is StaticBody2D:
 		pass
-	else:
+	elif body is KinematicBody2D:
 		$Notif.visible = false
 		if completed:
 			return
