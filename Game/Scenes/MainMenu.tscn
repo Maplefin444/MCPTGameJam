@@ -10,11 +10,8 @@
 script = ExtResource( 3 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -24.0
-margin_top = -24.0
-margin_right = 140.0
-margin_bottom = 76.0
-rect_scale = Vector2( 6.5, 6.5 )
+margin_right = 1024.0
+margin_bottom = 600.0
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -22,9 +19,9 @@ __meta__ = {
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 408.0
-margin_top = 384.0
+margin_top = 312.0
 margin_right = 450.0
-margin_bottom = 401.0
+margin_bottom = 329.0
 rect_scale = Vector2( 5, 5 )
 texture_normal = ExtResource( 1 )
 texture_pressed = ExtResource( 2 )
