@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=28 format=2]
+[gd_resource type="TileSet" load_steps=29 format=2]
 
 [ext_resource path="res://Assets/Tiles/shrub.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Tiles/snow1.png" type="Texture" id=2]
@@ -33,6 +33,9 @@ points = PoolVector2Array( 15.9081, 0.0162621, 15.9622, 7.859, 8.01126, 0.070346
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 1.6284, 12.9338, 13.4183, 13.0953, 13.7413, 16, 1.7899, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 0, 10.5112, 16, 10.8342, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 7.85159, 15.9653, 7.85159, 16, 16, 0, 16 )
@@ -517,9 +520,16 @@ points = PoolVector2Array( 7.90308, 0, 16, 0, 16, 16, 7.90308, 16 )
 27/navigation_offset = Vector2( 0, 0 )
 27/shape_offset = Vector2( 0, 0 )
 27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape = SubResource( 16 )
 27/shape_one_way = false
-27/shape_one_way_margin = 0.0
-27/shapes = [  ]
+27/shape_one_way_margin = 1.0
+27/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 27/z_index = 0
 29/name = "cloth.png 29"
 29/texture = ExtResource( 8 )
