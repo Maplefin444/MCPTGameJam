@@ -4,6 +4,8 @@ extends CanvasLayer
 signal enter
 signal exit
 
+var playerpos = Vector2()
+
 signal updatecoal(num)
 signal updatewood(num)
 signal updatecloth(num)
@@ -19,6 +21,8 @@ signal dead
 var dead = false
 
 
+func _physics_process(delta):
+	playerpos = get_parent().get_node("Player").global_position
 
 func _on_HeatArea_body_entered(body):
 	emit_signal("enter")

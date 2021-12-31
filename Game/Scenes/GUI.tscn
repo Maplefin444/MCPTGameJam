@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Assets/Buttons/MenuButtonPress.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/CoalLabel.gd" type="Script" id=2]
@@ -21,6 +21,8 @@
 [ext_resource path="res://Assets/Buttons/ExitButtonHover.png" type="Texture" id=19]
 [ext_resource path="res://Assets/Buttons/ExitButtonPress.png" type="Texture" id=20]
 [ext_resource path="res://Assets/Buttons/ExitButton.png" type="Texture" id=21]
+[ext_resource path="res://Scripts/Minimap.gd" type="Script" id=22]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=23]
 
 [sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
@@ -181,6 +183,41 @@ rect_scale = Vector2( 4, 4 )
 texture_normal = ExtResource( 21 )
 texture_pressed = ExtResource( 20 )
 texture_hover = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Minimap" type="NinePatchRect" parent="."]
+margin_left = 897.0
+margin_top = 473.0
+margin_right = 1023.0
+margin_bottom = 599.0
+texture = ExtResource( 17 )
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 5
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Minimap"]
+margin_left = 10.0
+margin_top = 9.0
+margin_right = 116.0
+margin_bottom = 115.0
+color = Color( 0.517647, 0.517647, 0.517647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="ColorRect" parent="Minimap"]
+margin_left = 59.0
+margin_top = 58.0
+margin_right = 64.0
+margin_bottom = 63.0
+script = ExtResource( 23 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
