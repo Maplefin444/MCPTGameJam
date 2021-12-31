@@ -1,15 +1,9 @@
-# MCPTGameJam
+# Bunbun's Adventure
 
-MCPT Game Jam 2021
+Made for [MCPT's 2021 Holiday Game Jam](https://holiday-game-jam.devpost.com/) by James H., Aaron Z., Caleb C., and Chelsea W.
 
-- side view, 3rd person
-- heat system
-  - have to return home before you freeze
-- resources
-  - wood, cloth, bricks/stone, coal
-- perhaps random gen
-- story
-  - you're living in your summer home, but a snowstorm hits and you have to escape
+Pitch and instructions can be found [here](https://docs.google.com/presentation/d/1KZ168LMISXagWmPHzC0CWTzPUiOVjFPjQxDpFXzB9kY/edit#slide=id.ge1d838b627_4_38)!
+
+Try it out here: https://maplefin.itch.io/bunbuns-adventure!
 
 
-https://maplefin.itch.io/bunbuns-adventure
