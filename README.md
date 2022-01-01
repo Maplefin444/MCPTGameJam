@@ -4,6 +4,8 @@ Bunbun's Adventure is a winter survival game. The user spawns in an enclosed map
 
 Made for [MCPT's 2021 Holiday Game Jam](https://holiday-game-jam.devpost.com/) by James H., Aaron Z., Caleb C., and Chelsea W.
 
+[edit: we made the most user-friendly game!]
+
 ## Links:
 
 - devpost: https://devpost.com/software/bunbun-s-adventure
